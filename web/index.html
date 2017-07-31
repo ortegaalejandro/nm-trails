@@ -50,24 +50,18 @@
       </li>
     </template>
 
-    <!-- Initialize Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-    <script>
-var config = {
-  apiKey: "AIzaSyCJoxhsDXOZKUnr4WkqQPw9iEI-kmOGhpA",
-  authDomain: "trails-across-new-mexico.firebaseapp.com",
-  databaseURL: "https://trails-across-new-mexico.firebaseio.com",
-  projectId: "trails-across-new-mexico",
-  storageBucket: "",
-  messagingSenderId: "1051009422594"
-};
-firebase.initializeApp(config);
-    </script>
-
-    <!-- Include Vue.js -->
+    <!-- Vue.js -->
     <script src="https://unpkg.com/vue"></script>
 
-    <!-- Include Trails app code -->
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+    <!-- VueFire (Vue.js and FireBase integration) -->
+    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+
+    <!-- Firebase wrapper that stores cache of data in localStorage -->
+
+    <!-- Trails app code -->
     <script src="js/app.js"></script>
     </body>
 </html>
