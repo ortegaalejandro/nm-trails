@@ -1,0 +1,24 @@
+{
+  "name": "nm-trails",
+  "version": "0.0.1",
+  "description": "Trails Across New Mexico",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "sw-precache": "^5.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kashizui/nm-trails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kashizui/nm-trails/issues"
+  }
+}

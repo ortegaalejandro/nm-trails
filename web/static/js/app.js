@@ -1,3 +1,10 @@
+// Register service worker for caching
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('./dist/js/service-worker.js')
+           .then(function() { console.log('Service Worker Registered'); });
+}
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyCJoxhsDXOZKUnr4WkqQPw9iEI-kmOGhpA",
@@ -21,4 +28,3 @@ Vue.component('trail-listing', {
   props: ['trail'],
   template: '#trail-listing-tpl',
 })
-
