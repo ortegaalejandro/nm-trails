@@ -2,3 +2,4 @@
 node_modules
 *.log
 /web/dist
+web/service-worker.js
