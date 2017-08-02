@@ -4,7 +4,8 @@
   "description": "Trails Across New Mexico",
   "main": "gulpfile.js",
   "dependencies": {
-    "sw-precache": "^5.2.0"
+    "sw-precache": "^5.2.0",
+    "sw-toolbox": "^3.6.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1"

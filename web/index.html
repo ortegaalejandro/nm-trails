@@ -19,6 +19,9 @@
 
     <!-- Include Trails-specific CSS -->
     <link href="static/css/app.css" rel="stylesheet">
+
+    <!-- Service worker for caching -->
+    <script src="static/js/register-service-worker.js"></script>
   </head>
   <body>
 
@@ -49,9 +52,6 @@
         </a>
       </li>
     </template>
-
-    <!-- Service worker for caching -->
-    <script src="dist/js/service-worker.js"></script>
 
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue"></script>
