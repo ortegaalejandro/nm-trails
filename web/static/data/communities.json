@@ -1,0 +1,11 @@
+{
+    "1": {
+        "name": "Step Into Cuba",
+        "location": "Cuba",
+        "description": "A guide to places near Cuba, New Mexico",
+        "banner_image_url": "/static/images/GuideLogo.png",
+        "image_url": "/static/images/DSCN1033.JPG",
+        "resources_url": "",
+        "trails": [1, 2, 3]
+    }
+}
