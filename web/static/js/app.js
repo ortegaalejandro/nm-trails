@@ -1,4 +1,5 @@
 // Initialize Firebase
+/*  not using firebase for now
 var config = {
   apiKey: "AIzaSyCJoxhsDXOZKUnr4WkqQPw9iEI-kmOGhpA",
   authDomain: "trails-across-new-mexico.firebaseapp.com",
@@ -9,11 +10,18 @@ var config = {
 };
 firebaseApp = firebase.initializeApp(config);
 var db = firebaseApp.database()
+*/
 
 vm = new Vue({
   el: '#app',
-  firebase: {
-    trails: db.ref("/trails")
+  data: {
+    trails: null,
+  },
+  created: function() {
+    var self = this;
+    $.getJSON('/static/data/trails.json', function (data) {
+      self.trails = data;
+    });
   }
 })
 

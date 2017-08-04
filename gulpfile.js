@@ -19,6 +19,10 @@ gulp.task('generate-service-worker', function(callback) {
         urlPattern: /^https:\/\/www\.gstatic\.com\//,
         handler: 'networkFirst'
       },
+      {
+        urlPattern: /^https:\/\/cdnjs\.cloudflare\.com\//,
+        handler: 'networkFirst'
+      },
     ],
   }, callback);
 });
