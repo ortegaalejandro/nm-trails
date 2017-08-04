@@ -1,18 +1,30 @@
+// vm stands for "view-model"
 vm = new Vue({
+  // Bind this view-model to the element with id="app"
   el: '#app',
+
+  // Declare what data is in this view-model
   data: {
     trails: null,
   },
+
+  // This gets executed when this view-model is created
   created: function() {
+    // Load the data from our static JSON files
     var self = this;
     $.getJSON('/static/data/trails.json', function (data) {
       self.trails = data;
+      console.log(data);
     });
   }
 })
 
+// Define a new component called <trail-listing>
 Vue.component('trail-listing', {
+  // Takes one object named "trail" as a property
   props: ['trail'],
+
+  // Use the template defined with the id="trail-listing-tpl"
   template: '#trail-listing-tpl',
 })
 
