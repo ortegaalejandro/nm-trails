@@ -33,24 +33,37 @@
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
       <div id="app">
-        <ul class="table-view">
-          <trail-listing
-             v-for="trail in trails"
-             v-bind:trail="trail"
-             v-bind:key="trail.id">
-          </trail-listing>
-        </ul>
+        <component v-bind:is="currentView" v-bind:trails="trails"></component>
       </div>
     </div>
 
     <!-- Templates -->
+    <template id="trail-list-tpl">
+      <ul class="table-view">
+        <trail-listing
+           v-for="trail in trails"
+           v-bind:trail="trail"
+           v-bind:key="trail.id">
+        </trail-listing>
+      </ul>
+    </template>
+
     <template id="trail-listing-tpl">
       <li class="table-view-cell trail-listing-cell">
         <a class="navigate-right">
+          <!-- <img v-bind:src="trail.image_url" /> -->
           <div>{{ trail.name }}</div>
           <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
         </a>
       </li>
+    </template>
+
+    <template id="trail-details-tpl">
+      <div>
+        <img v-bind:src="trail.image_url" />
+        <div>{{ trail.name }}</div>
+        <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
+      </div>
     </template>
 
     <!-- jQuery -->
