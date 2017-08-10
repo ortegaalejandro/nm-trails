@@ -61,13 +61,10 @@ var trailDetails = Vue.component('trail-details', {
 // Duplicate Trails functionality for communities
 // Define a new component called <community-listing>
 var communityList = Vue.component('community-list', {
-  // Takes an array of communities as a property
-  // props: ['communities'],
-
   // Use the template defined with the id="community-list-tpl"
   template: '#community-list-tpl',
 
-  communitiesdata: function() {
+  data: function() {
     return {
       communities: null,
     }
@@ -76,9 +73,8 @@ var communityList = Vue.component('community-list', {
   // This gets executed when this view-model is created
   created: function() {
     // Load the data from our static JSON files
-    $.getJSON('/static/data/communities.json', function (communitiesdata) {
-      this.community = communitiesdata;
-      console.log(data);
+    $.getJSON('/static/data/communities.json', function (data) {
+      this.communities = data;
     }.bind(this));
   },
 })
@@ -98,7 +94,7 @@ var communityDetails = Vue.component('community-details', {
   // Use the template defined with the id="community-details-tpl"
   template: '#community-details-tpl',
 
-  communitiesdata: function() {
+  data: function() {
     return {
       community: null,
       loading: false,
@@ -109,8 +105,8 @@ var communityDetails = Vue.component('community-details', {
   created: function() {
     this.loading = true;
     // Load the data from our static JSON files
-    $.getJSON('/static/data/communities.json', function (communitiesdata) {
-      this.community = communitiesdata[this.id];
+    $.getJSON('/static/data/communities.json', function (data) {
+      this.community = data[this.id];
       this.loading = false;
     }.bind(this));
   },
@@ -123,9 +119,9 @@ var router = new VueRouter({
   routes: [
     { path: '/trails', component: trailList},
     { path: '/trails/:id', component: trailDetails, props: true},
-    { path: '/', redirect: '/trails' }
-    //{ path: '/communities', component: communityList},
-    //{ path: '/communities/:id', component: communityDetails, props:true},
+    { path: '/', redirect: '/trails' },
+    { path: '/communities', component: communityList},
+    { path: '/communities/:id', component: communityDetails, props:true},
     //{ path: '/', redirect: '/communities'}
   ]
 })
@@ -145,5 +141,10 @@ vm = new Vue({
 // in the same div as the app content div
 new Vue({
   el: '#header',
+  router: router,
+})
+
+new Vue({
+  el: '#tab-bar',
   router: router,
 })

@@ -26,12 +26,14 @@
   <body>
 
     <!-- Make sure all your bars are the first things in your <body> -->
+    <!-- Header bar -->
     <header id="header" class="bar bar-nav">
       <router-link to="/trails" class="icon icon-left-nav pull-left"></router-link>
       <h1 class="title">Trails</h1>
     </header>
 
-    <nav class="bar bar-tab">
+    <!-- Footer tab bar -->
+    <nav id="tab-bar" class="bar bar-tab">
       <router-link to="/communities" class="tab-item">
         <span class="icon icon-search"></span>
         <span class="tab-label">Search Communities</span>
@@ -41,9 +43,6 @@
         <span class="icon icon-list"></span>
         <span class="tab-label">Trails List</span>
       </a>
-
-
-
     </nav>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
@@ -117,7 +116,7 @@
         Loading...
       </div>
       <div v-else>
-        <img v-bind:src="banner_image_url" />
+        <img v-bind:src="community.banner_image_url" />
         <div>{{ community.name }}</div>
         <div><small>{{community.location}}, {{community.description}}</small></div>
       </div>
