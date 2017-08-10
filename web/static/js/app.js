@@ -12,14 +12,9 @@ var trailList = Vue.component('trail-list', {
   // This gets executed when this view-model is created
   created: function() {
     // Load the data from our static JSON files
-    this.$http.get('/static/data/trails.json').then(function success(response) {
-      return response.json();
-    }, function fail(response) {
-      // TODO: display some failure/offline screen
-      console.error("failed");
-    }).then(function(data) {
+    $.getJSON('/static/data/trails.json', function (data) {
       this.trails = data;
-    });
+    }.bind(this));
   },
 })
 
@@ -65,15 +60,10 @@ var trailDetails = Vue.component('trail-details', {
     fetchData: function() {
       this.loading = true;
       // Load the data from our static JSON files
-      this.$http.get('/static/data/trails.json').then(function success(response) {
-        return response.json();
-      }, function fail(response) {
-        // TODO: display some failure/offline screen
-        console.error("failed");
-      }).then(function(data) {
+      $.getJSON('/static/data/trails.json', function (data) {
         this.trail = data[this.id];
         this.loading = false;
-      });
+      }.bind(this));
     },
   },
 })
@@ -95,14 +85,9 @@ var communityList = Vue.component('community-list', {
   // This gets executed when this view-model is created
   created: function() {
     // Load the data from our static JSON files
-    this.$http.get('/static/data/communities.json').then(function success(response) {
-      return response.json();
-    }, function fail(response) {
-      // TODO: display some failure/offline screen
-      console.error("failed");
-    }).then(function(data) {
+    $.getJSON('/static/data/communities.json', function (data) {
       this.communities = data;
-    });
+    }.bind(this));
   },
 })
 
@@ -142,15 +127,10 @@ var communityDetails = Vue.component('community-details', {
     fetchData: function() {
       this.loading = true;
       // Load the data from our static JSON files
-      this.$http.get('/static/data/communities.json').then(function success(response) {
-        return response.json();
-      }, function fail(response) {
-        // TODO: display some failure/offline screen
-        console.error("failed");
-      }).then(function(data) {
+      $.getJSON('/static/data/communities.json', function (data) {
         this.community = data[this.id];
         this.loading = false;
-      });
+      }.bind(this));
     },
   },
 })
@@ -194,7 +174,7 @@ new Vue({
   el: '#header',
 
   data: {
-    title: 'Trails Across New Mexico',  // this should never be displayed
+    title: 'Trails Across New Mexico',
   },
 
   // "Inject" the same router
@@ -204,9 +184,6 @@ new Vue({
     bus.$on('new-title', function(title) {
       this.title = title;
     }.bind(this));
-
-    // Initial title
-    bus.$emit('new-title', this.$route.meta.title);
   },
 })
 
