@@ -119,14 +119,25 @@ var communityDetails = Vue.component('community-details', {
     }
   },
 
-  // This gets executed when this view-model is created
+  watch: {
+    // call again the method if the route changes
+    '$route': 'fetchData'
+  },
+
   created: function() {
-    this.loading = true;
-    // Load the data from our static JSON files
-    $.getJSON('/static/data/communities.json', function (data) {
-      this.community = data[this.id];
-      this.loading = false;
-    }.bind(this));
+    this.fetchData();
+  },
+
+  // This gets executed when this view-model is created
+  methods: {
+    fetchData: function() {
+      this.loading = true;
+      // Load the data from our static JSON files
+      $.getJSON('/static/data/communities.json', function (data) {
+        this.community = data[this.id];
+        this.loading = false;
+      }.bind(this));
+    },
   },
 })
 //Communities json
