@@ -74,3 +74,10 @@ vm = new Vue({
   // "Inject" the router we defined above into the application
   router: router,
 })
+
+// Create another view-model for the header, since the header has to be the first thing in the body
+new Vue({
+  el: '#header',
+  router: router,
+})
+
