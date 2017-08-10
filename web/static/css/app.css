@@ -25,6 +25,13 @@ div.jumbotron > div.details {
 	padding: 4px;
 }
 
+div.jumbotron > div.details-right {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	padding: 4px;
+}
+
 .light-text {
 	color: white;
 }
