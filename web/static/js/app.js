@@ -1,8 +1,5 @@
 // Define a new component called <trail-listing>
 var trailList = Vue.component('trail-list', {
-  // Takes an array of trails as a property
-  // props: ['trails'],
-
   // Use the template defined with the id="trail-list-tpl"
   template: '#trail-list-tpl',
 
@@ -14,7 +11,6 @@ var trailList = Vue.component('trail-list', {
 
   // This gets executed when this view-model is created
   created: function() {
-    bus.$emit('new-title', 'Trails');
     // Load the data from our static JSON files
     $.getJSON('/static/data/trails.json', function (data) {
       this.trails = data;
@@ -66,13 +62,11 @@ var trailDetails = Vue.component('trail-details', {
       // Load the data from our static JSON files
       $.getJSON('/static/data/trails.json', function (data) {
         this.trail = data[this.id];
-        bus.$emit('new-title', this.trail.name);
         this.loading = false;
       }.bind(this));
     },
   },
 })
-
 
 
 
@@ -146,14 +140,18 @@ var communityDetails = Vue.component('community-details', {
 // Define the routes
 var router = new VueRouter({
   routes: [
-    { path: '/trails', component: trailList},
-    { path: '/trails/:id', component: trailDetails, props: true},
+    { path: '/trails', component: trailList, meta: {title: "Trails"}},
+    { path: '/trails/:id', component: trailDetails, props: true, meta: {title: "Trail Details"}},
+    { path: '/communities', component: communityList, meta: {title: "Communities"}},
+    { path: '/communities/:id', component: communityDetails, props:true, meta: {title: "Community Details"}},
     { path: '/', redirect: '/trails' },
-    { path: '/communities', component: communityList},
-    { path: '/communities/:id', component: communityDetails, props:true},
-    //{ path: '/', redirect: '/communities'}
   ]
 })
+
+// Update the title on each navigation event based on the meta.title fields defined above.
+router.afterEach(function(to, from) {
+  bus.$emit('new-title', to.meta.title);
+});
 
 // An empty Vue instance to serve as a central event bus
 // https://vuejs.org/v2/guide/components.html#Non-Parent-Child-Communication
@@ -176,7 +174,7 @@ new Vue({
   el: '#header',
 
   data: {
-    title: 'Trails',
+    title: 'Trails Across New Mexico',
   },
 
   // "Inject" the same router
