@@ -5,11 +5,29 @@ div.jumbotron {
 }
 
 div.jumbotron > img {
-	position: absolute;
-	left: 50%;
-	height: inherit;
-	width: auto;
-	transform: translate(-50%, 0%);
-	-ms-transform: translate(-50%, 0%);
-	-webkit-transform: translate(-50%, 0%);
+	position: relative;
+	height: auto;
+	width: 100%;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+div.jumbotron-small {
+	height: 100px;
+}
+
+
+li.trail-listing-cell {
+	padding: 0 !important;
+	border: none !important;
+	background-color: black;
+	color: white;
+}
+
+li.trail-listing-cell a {
+	color: white;
+}
+
+div.trail-listing-cell-label {
+	padding: 8px 65px 8px 8px;
 }

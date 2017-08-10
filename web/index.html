@@ -55,12 +55,19 @@
 
     <template id="trail-listing-tpl">
       <li class="table-view-cell trail-listing-cell">
-        <router-link v-bind:to="'/trails/' + trailId" class="navigate-right">
-          <!-- TODO: make the images the background for these listings like in the original app -->
-          <!-- <img v-bind:src="trail.image_url" /> -->
-          <div>{{ trail.name }}</div>
-          <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
-        </a>
+        <div>
+          <router-link v-bind:to="'/trails/' + trailId">
+            <!-- TODO: make the images the background for these listings like in the original app -->
+            <!-- <img v-bind:src="trail.image_url" /> -->
+            <div class="jumbotron jumbotron-small">
+              <img :src="trail.image_url" />
+            </div>
+            <div class="trail-listing-cell-label">
+              <div>{{ trail.name }}</div>
+              <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
+            </div>
+          </router-link>
+        </div>
       </li>
     </template>
 
