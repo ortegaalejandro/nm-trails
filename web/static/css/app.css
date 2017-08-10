@@ -30,5 +30,19 @@ li.trail-listing-cell a {
 }
 
 div.trail-listing-cell-label {
-	padding: 8px 65px 8px 8px;
+	padding: 8px;
+}
+
+div.dogs-allowed {
+	width: 30px;
+	height: 30px;
+	background-image: url("../images/dogs-allowed-black.png");
+	background-size: cover;
+}
+
+div.dogs-not-allowed {
+	width: 30px;
+	height: 30px;
+	background-image: url("../images/dogs-not-allowed-black.png");
+	background-size: cover;
 }
