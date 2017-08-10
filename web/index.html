@@ -111,7 +111,7 @@
             <small>Share your hike on: </small>
           </div>
         </div>
-        <div class="trail-details-body"> 
+        <div class="content-body"> 
           <div>{{trail.description}}</div>
         </div>
       </div>
@@ -145,8 +145,10 @@
       </div>
       <div v-else>
         <img v-bind:src="community.banner_image_url" class="banner" />
-        <div>{{ community.name }}</div>
-        <div><small>{{community.location}}, {{community.description}}</small></div>
+        <div class="content-body"> 
+          <div>{{ community.name }}</div>
+          <div><small>{{community.location}}, {{community.description}}</small></div>
+        </div>
       </div>
     </template>
 
