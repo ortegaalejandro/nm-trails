@@ -31,6 +31,21 @@
       <h1 class="title">Trails</h1>
     </header>
 
+    <nav class="bar bar-tab">
+      <router-link to="/communities" class="tab-item">
+        <span class="icon icon-search"></span>
+        <span class="tab-label">Search Communities</span>
+      </router-link>
+
+      <a href="#" class="tab-item">
+        <span class="icon icon-list"></span>
+        <span class="tab-label">Trails List</span>
+      </a>
+
+
+
+    </nav>
+
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
       <div id="app">
@@ -74,6 +89,41 @@
         <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
       </div>
     </template>
+
+    <template id="community-list-tpl">
+      <ul class="table-view">
+        <community-listing
+           v-for="(community, communityId) in communities"
+           v-bind:community="community"
+           v-bind:community-id="communityId"
+           v-bind:key="communityId">
+        </community-listing>
+      </ul>
+    </template>
+
+    <template id="community-listing-tpl">
+      <li class="table-view-cell community-listing-cell">
+        <router-link v-bind:to="'/communities/' + communityId" class="navigate-right">
+          <!-- TODO: Add logos for the communities pulled left -->
+          <!-- <img v-bind:src="trail.image_url" /> -->
+          <div>{{ community.name }}</div>
+          <div><small>{{community.location}}, {{community.description}}</small></div>
+        </a>
+      </li>
+    </template>
+
+    <template id="community-details-tpl">
+      <div v-if="loading">
+        Loading...
+      </div>
+      <div v-else>
+        <img v-bind:src="banner_image_url" />
+        <div>{{ community.name }}</div>
+        <div><small>{{community.location}}, {{community.description}}</small></div>
+      </div>
+    </template>
+
+
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
