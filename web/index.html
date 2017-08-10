@@ -33,24 +33,29 @@
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
       <div id="app">
-        <component v-bind:is="currentView" v-bind:trails="trails"></component>
+        <router-view></router-view>
       </div>
     </div>
+
+    <!-- TODO: Add tab bar on the bottom so that we can navigate
+    between e.g. list of communities, list of trails, etc. -->
 
     <!-- Templates -->
     <template id="trail-list-tpl">
       <ul class="table-view">
         <trail-listing
-           v-for="trail in trails"
+           v-for="(trail, trailId) in trails"
            v-bind:trail="trail"
-           v-bind:key="trail.id">
+           v-bind:trail-id="trailId"
+           v-bind:key="trailId">
         </trail-listing>
       </ul>
     </template>
 
     <template id="trail-listing-tpl">
       <li class="table-view-cell trail-listing-cell">
-        <a class="navigate-right">
+        <router-link v-bind:to="'/trails/' + trailId" class="navigate-right">
+          <!-- TODO: make the images the background for these listings like in the original app -->
           <!-- <img v-bind:src="trail.image_url" /> -->
           <div>{{ trail.name }}</div>
           <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
@@ -59,7 +64,10 @@
     </template>
 
     <template id="trail-details-tpl">
-      <div>
+      <div v-if="loading">
+        Loading...
+      </div>
+      <div v-else>
         <img v-bind:src="trail.image_url" />
         <div>{{ trail.name }}</div>
         <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
@@ -71,6 +79,10 @@
 
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <!-- vue-resource for AJAX/HTTP requests -->
+    <script src="https://unpkg.com/vue-resource@1.3.4"></script>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
