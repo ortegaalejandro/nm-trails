@@ -1,3 +1,44 @@
+// Wrapper around fetching of the JSON data to avoid fetching twice in a session
+var TrailData = {
+  _trails: null,
+  _communities: null,
+
+  getTrails: function() {
+    if (this._trails == null) {
+      return $.getJSON('/static/data/trails.json').then(function(trails) {
+        this._trails = trails;
+        return trails;
+      }.bind(this))
+    } else {
+      return $.Deferred().resolve(this._trails).promise();
+    }
+  },
+
+  getTrail: function(id) {
+    return this.getTrails().then(function(trails) {
+      return trails[id];
+    });
+  },
+
+  getCommunities: function() {
+    if (this._communities == null) {
+      return $.getJSON('/static/data/communities.json').then(function(communities) {
+        this._communities = communities;
+        return communities;
+      }.bind(this))
+    } else {
+      return $.Deferred().resolve(this._communities).promise();
+    }
+  },
+
+  getCommunity: function(id) {
+    return this.getCommunities().then(function(communities) {
+      return communities[id];
+    });
+  },
+};
+
+
 // Define a new component called <trail-listing>
 var trailList = Vue.component('trail-list', {
   // Use the template defined with the id="trail-list-tpl"
@@ -12,8 +53,8 @@ var trailList = Vue.component('trail-list', {
   // This gets executed when this view-model is created
   created: function() {
     // Load the data from our static JSON files
-    $.getJSON('/static/data/trails.json', function (data) {
-      this.trails = data;
+    TrailData.getTrails().then(function(trails) {
+      this.trails = trails;
     }.bind(this));
   },
 })
@@ -60,8 +101,8 @@ var trailDetails = Vue.component('trail-details', {
     fetchData: function() {
       this.loading = true;
       // Load the data from our static JSON files
-      $.getJSON('/static/data/trails.json', function (data) {
-        this.trail = data[this.id];
+      TrailData.getTrail(this.id).then(function(trail) {
+        this.trail = trail;
         this.loading = false;
       }.bind(this));
     },
@@ -85,7 +126,7 @@ var communityList = Vue.component('community-list', {
   // This gets executed when this view-model is created
   created: function() {
     // Load the data from our static JSON files
-    $.getJSON('/static/data/communities.json', function (data) {
+    TrailData.getCommunities().then(function(data) {
       this.communities = data;
     }.bind(this));
   },
@@ -127,8 +168,8 @@ var communityDetails = Vue.component('community-details', {
     fetchData: function() {
       this.loading = true;
       // Load the data from our static JSON files
-      $.getJSON('/static/data/communities.json', function (data) {
-        this.community = data[this.id];
+      TrailData.getCommunity(this.id).then(function(data) {
+        this.community = data;
         this.loading = false;
       }.bind(this));
     },
@@ -174,7 +215,7 @@ new Vue({
   el: '#header',
 
   data: {
-    title: 'Trails Across New Mexico',
+    title: 'Trails Across New Mexico', // this should never be displayed
   },
 
   // "Inject" the same router
@@ -184,6 +225,9 @@ new Vue({
     bus.$on('new-title', function(title) {
       this.title = title;
     }.bind(this));
+
+    // Set initial title
+    bus.$emit('new-title', this.$route.meta.title);
   },
 })
 
