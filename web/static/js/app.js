@@ -37,8 +37,8 @@ Vue.component('dog-icon', {
 })
 
 var trailDetails = Vue.component('trail-details', {
-  // Takes one object named "trail" as a property
-  props: ['id'],//['trail'],
+  // id gets passed in as a prop from the router
+  props: ['id'],
 
   // Use the template defined with the id="trail-details-tpl"
   template: '#trail-details-tpl',
@@ -106,8 +106,8 @@ Vue.component('community-listing', {
 })
 
 var communityDetails = Vue.component('community-details', {
-  // Takes one object named "community" as a property
-  props: ['id'],//['community'],
+  // id gets passed in as a prop from the router
+  props: ['id'],
 
   // Use the template defined with the id="community-details-tpl"
   template: '#community-details-tpl',

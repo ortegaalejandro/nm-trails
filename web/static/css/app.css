@@ -32,6 +32,10 @@ div.jumbotron > div.details-right {
 	padding: 4px;
 }
 
+.banner {
+	width: 100%;
+}
+
 .light-text {
 	color: white;
 }

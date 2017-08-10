@@ -29,7 +29,8 @@
     <!-- Make sure all your bars are the first things in your <body> -->
     <!-- Header bar -->
     <header id="header" class="bar bar-nav">
-      <router-link to="/trails" class="icon icon-left-nav pull-left"></router-link>
+      <!-- <router-link to="/trails" class="icon icon-left-nav pull-left"></router-link> -->
+      <a href="javascript: window.history.back();" class="icon icon-left-nav pull-left"></a>
       <h1 class="title">{{ title }}</h1>
     </header>
 
@@ -92,6 +93,7 @@
 
     <template id="trail-details-tpl">
       <div v-if="loading">
+        <!-- place a nice picture and maybe animation -->
         Loading...
       </div>
       <div v-else>
@@ -142,12 +144,11 @@
         Loading...
       </div>
       <div v-else>
-        <img v-bind:src="community.banner_image_url" />
+        <img v-bind:src="community.banner_image_url" class="banner" />
         <div>{{ community.name }}</div>
         <div><small>{{community.location}}, {{community.description}}</small></div>
       </div>
     </template>
-
 
 
     <!-- jQuery -->
