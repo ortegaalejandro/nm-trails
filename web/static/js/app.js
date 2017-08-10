@@ -23,11 +23,17 @@ var trailList = Vue.component('trail-list', {
 })
 
 Vue.component('trail-listing', {
-  // Takes one object named "trail" as a property
   props: ['trail', 'trailId'],
 
   // Use the template defined with the id="trail-listing-tpl"
   template: '#trail-listing-tpl',
+})
+
+Vue.component('dog-icon', {
+  props: ['allowed'],
+
+  // Use the template defined with the id="trail-listing-tpl"
+  template: '#dog-icon-tpl',
 })
 
 var trailDetails = Vue.component('trail-details', {
@@ -77,6 +83,8 @@ var router = new VueRouter({
   ]
 })
 
+// An empty Vue instance to serve as a central event bus
+// https://vuejs.org/v2/guide/components.html#Non-Parent-Child-Communication
 var bus = new Vue();
 
 // vm stands for "view-model"

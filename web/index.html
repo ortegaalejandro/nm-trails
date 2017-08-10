@@ -62,14 +62,18 @@
               <img :src="trail.image_url" />
             </div>
             <div class="trail-listing-cell-label">
-              <div v-if="trail.dogs_allowed" class="pull-right dogs-allowed"></div>
-              <div v-else class="pull-right dogs-not-allowed"></div>
+              <dog-icon :allowed="trail.dogs_allowed" class="pull-right"></dog-icon>
               <div>{{ trail.name }}</div>
               <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
             </div>
           </router-link>
         </div>
       </li>
+    </template>
+
+    <template id="dog-icon-tpl">
+      <div v-if="allowed" class="dogs-allowed"></div>
+      <div v-else class="dogs-not-allowed"></div>
     </template>
 
     <template id="trail-details-tpl">
@@ -79,8 +83,13 @@
       <div v-else>
         <div class="jumbotron">
           <img v-bind:src="trail.image_url" class="jumbotron" />
+          <div class="details light-text">
+            <div>
+              <dog-icon :allowed="trail.dogs_allowed"></dog-icon>
+            </div>
+            <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
+          </div>
         </div>
-        <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
         <div>{{trail.description}}</div>
       </div>
     </template>

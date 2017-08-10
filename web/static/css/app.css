@@ -3,6 +3,7 @@ div.jumbotron {
 	width: 100%;
 	overflow: hidden;
 	background-color: black;
+	position: relative;
 }
 
 div.jumbotron > img {
@@ -17,6 +18,16 @@ div.jumbotron-small {
 	height: 100px;
 }
 
+div.jumbotron > div.details {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 4px;
+}
+
+.light-text {
+	color: white;
+}
 
 li.trail-listing-cell {
 	padding: 0 !important;
@@ -46,3 +57,4 @@ div.dogs-not-allowed {
 	background-image: url("../images/dogs-not-allowed-black.png");
 	background-size: cover;
 }
+
