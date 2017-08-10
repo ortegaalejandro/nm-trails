@@ -69,7 +69,9 @@
         Loading...
       </div>
       <div v-else>
-        <img v-bind:src="trail.image_url" />
+        <div class="jumbotron">
+          <img v-bind:src="trail.image_url" class="jumbotron" />
+        </div>
         <div>{{ trail.name }}</div>
         <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
       </div>
