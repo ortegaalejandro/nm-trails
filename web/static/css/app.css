@@ -44,17 +44,38 @@ div.trail-listing-cell-label {
 	padding: 8px;
 }
 
-div.dogs-allowed {
-	width: 30px;
+.dogs-allowed {
+	display: inline-block;
+	width: 31px;
 	height: 30px;
 	background-image: url("../images/dogs-allowed-black.png");
 	background-size: cover;
 }
 
-div.dogs-not-allowed {
-	width: 30px;
+.dogs-not-allowed {
+	display: inline-block;
+	width: 31px;
 	height: 30px;
 	background-image: url("../images/dogs-not-allowed-black.png");
 	background-size: cover;
 }
 
+.directions-icon {
+	display: inline-block;
+	width: 33px;
+	height: 30px;
+	background-image: url("../images/Directions.png");
+	background-size: cover;
+}
+
+.map-icon {
+	display: inline-block;
+	width: 22px;
+	height: 30px;
+	background-image: url("../images/mapicon.png");
+	background-size: cover;
+}
+
+div.trail-details-body {
+	padding: 8px;
+}

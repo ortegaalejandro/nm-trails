@@ -85,12 +85,16 @@
           <img v-bind:src="trail.image_url" class="jumbotron" />
           <div class="details light-text">
             <div>
+              <a class="directions-icon" :href="trail.static_map_url"></a>
               <dog-icon :allowed="trail.dogs_allowed"></dog-icon>
+              <a class="map-icon" :href="trail.live_map_url"></a>
             </div>
             <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
           </div>
         </div>
-        <div>{{trail.description}}</div>
+        <div class="trail-details-body"> 
+          <div>{{trail.description}}</div>
+        </div>
       </div>
     </template>
 
