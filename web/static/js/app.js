@@ -14,10 +14,10 @@ var trailList = Vue.component('trail-list', {
 
   // This gets executed when this view-model is created
   created: function() {
+    bus.$emit('new-title', 'Trails');
     // Load the data from our static JSON files
     $.getJSON('/static/data/trails.json', function (data) {
       this.trails = data;
-      console.log(data);
     }.bind(this));
   },
 })
@@ -46,12 +46,24 @@ var trailDetails = Vue.component('trail-details', {
 
   // This gets executed when this view-model is created
   created: function() {
-    this.loading = true;
-    // Load the data from our static JSON files
-    $.getJSON('/static/data/trails.json', function (data) {
-      this.trail = data[this.id];
-      this.loading = false;
-    }.bind(this));
+    this.fetchData();
+  },
+
+  watch: {
+    // call again the method if the route changes
+    '$route': 'fetchData'
+  },
+
+  methods: {
+    fetchData: function() {
+      this.loading = true;
+      // Load the data from our static JSON files
+      $.getJSON('/static/data/trails.json', function (data) {
+        this.trail = data[this.id];
+        bus.$emit('new-title', this.trail.name);
+        this.loading = false;
+      }.bind(this));
+    },
   },
 })
 
@@ -65,6 +77,7 @@ var router = new VueRouter({
   ]
 })
 
+var bus = new Vue();
 
 // vm stands for "view-model"
 vm = new Vue({
@@ -79,7 +92,20 @@ vm = new Vue({
 // has to be the first thing in the body and cannot be wrapped
 // in the same div as the app content div
 new Vue({
+  // Bind it to the header
   el: '#header',
+
+  data: {
+    title: 'Trails',
+  },
+
+  // "Inject" the same router
   router: router,
+
+  created: function() {
+    bus.$on('new-title', function(title) {
+      this.title = title;
+    }.bind(this));
+  },
 })
 

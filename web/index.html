@@ -28,7 +28,7 @@
     <!-- Make sure all your bars are the first things in your <body> -->
     <header id="header" class="bar bar-nav">
       <router-link to="/trails" class="icon icon-left-nav pull-left"></router-link>
-      <h1 class="title">Trails</h1>
+      <h1 class="title">{{ title }}</h1>
     </header>
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
@@ -57,8 +57,6 @@
       <li class="table-view-cell trail-listing-cell">
         <div>
           <router-link v-bind:to="'/trails/' + trailId">
-            <!-- TODO: make the images the background for these listings like in the original app -->
-            <!-- <img v-bind:src="trail.image_url" /> -->
             <div class="jumbotron jumbotron-small">
               <img :src="trail.image_url" />
             </div>
@@ -79,8 +77,8 @@
         <div class="jumbotron">
           <img v-bind:src="trail.image_url" class="jumbotron" />
         </div>
-        <div>{{ trail.name }}</div>
         <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
+        <div>{{trail.description}}</div>
       </div>
     </template>
 

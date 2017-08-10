@@ -2,12 +2,13 @@ div.jumbotron {
 	height: 200px;
 	width: 100%;
 	overflow: hidden;
+	background-color: black;
 }
 
 div.jumbotron > img {
 	position: relative;
 	height: auto;
-	width: 100%;
+	width: 110%;
 	top: 50%;
 	transform: translate(0, -50%);
 }
