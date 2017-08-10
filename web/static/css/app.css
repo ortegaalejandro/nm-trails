@@ -1,2 +1,81 @@
+div.jumbotron {
+	height: 200px;
+	width: 100%;
+	overflow: hidden;
+	background-color: black;
+	position: relative;
+}
+
+div.jumbotron > img {
+	position: relative;
+	height: auto;
+	width: 110%;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+div.jumbotron-small {
+	height: 100px;
+}
+
+div.jumbotron > div.details {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 4px;
+}
+
+.light-text {
+	color: white;
+}
+
 li.trail-listing-cell {
+	padding: 0 !important;
+	border: none !important;
+	background-color: black;
+	color: white;
+}
+
+li.trail-listing-cell a {
+	color: white;
+}
+
+div.trail-listing-cell-label {
+	padding: 8px;
+}
+
+.dogs-allowed {
+	display: inline-block;
+	width: 31px;
+	height: 30px;
+	background-image: url("../images/dogs-allowed-black.png");
+	background-size: cover;
+}
+
+.dogs-not-allowed {
+	display: inline-block;
+	width: 31px;
+	height: 30px;
+	background-image: url("../images/dogs-not-allowed-black.png");
+	background-size: cover;
+}
+
+.directions-icon {
+	display: inline-block;
+	width: 33px;
+	height: 30px;
+	background-image: url("../images/Directions.png");
+	background-size: cover;
+}
+
+.map-icon {
+	display: inline-block;
+	width: 22px;
+	height: 30px;
+	background-image: url("../images/mapicon.png");
+	background-size: cover;
+}
+
+div.trail-details-body {
+	padding: 8px;
 }

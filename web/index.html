@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,7 +30,7 @@
     <!-- Header bar -->
     <header id="header" class="bar bar-nav">
       <router-link to="/trails" class="icon icon-left-nav pull-left"></router-link>
-      <h1 class="title">Trails</h1>
+      <h1 class="title">{{ title }}</h1>
     </header>
 
     <!-- Footer tab bar -->
@@ -69,13 +70,24 @@
 
     <template id="trail-listing-tpl">
       <li class="table-view-cell trail-listing-cell">
-        <router-link v-bind:to="'/trails/' + trailId" class="navigate-right">
-          <!-- TODO: make the images the background for these listings like in the original app -->
-          <!-- <img v-bind:src="trail.image_url" /> -->
-          <div>{{ trail.name }}</div>
-          <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
-        </a>
+        <div>
+          <router-link v-bind:to="'/trails/' + trailId">
+            <div class="jumbotron jumbotron-small">
+              <img :src="trail.image_url" />
+            </div>
+            <div class="trail-listing-cell-label">
+              <dog-icon :allowed="trail.dogs_allowed" class="pull-right"></dog-icon>
+              <div>{{ trail.name }}</div>
+              <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
+            </div>
+          </router-link>
+        </div>
       </li>
+    </template>
+
+    <template id="dog-icon-tpl">
+      <div v-if="allowed" class="dogs-allowed"></div>
+      <div v-else class="dogs-not-allowed"></div>
     </template>
 
     <template id="trail-details-tpl">
@@ -83,9 +95,20 @@
         Loading...
       </div>
       <div v-else>
-        <img v-bind:src="trail.image_url" />
-        <div>{{ trail.name }}</div>
-        <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
+        <div class="jumbotron">
+          <img v-bind:src="trail.image_url" class="jumbotron" />
+          <div class="details light-text">
+            <div>
+              <a class="directions-icon" :href="trail.static_map_url"></a>
+              <dog-icon :allowed="trail.dogs_allowed"></dog-icon>
+              <a class="map-icon" :href="trail.live_map_url"></a>
+            </div>
+            <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
+          </div>
+        </div>
+        <div class="trail-details-body"> 
+          <div>{{trail.description}}</div>
+        </div>
       </div>
     </template>
 
