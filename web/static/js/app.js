@@ -75,7 +75,9 @@ vm = new Vue({
   router: router,
 })
 
-// Create another view-model for the header, since the header has to be the first thing in the body
+// Create another view-model for the header, since the header
+// has to be the first thing in the body and cannot be wrapped
+// in the same div as the app content div
 new Vue({
   el: '#header',
   router: router,
