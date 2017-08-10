@@ -47,15 +47,22 @@
       </a>
     </nav>
 
+    <!-- Facebook JavaScript SDK -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=168532903209292";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
       <div id="app">
         <router-view></router-view>
       </div>
     </div>
-
-    <!-- TODO: Add tab bar on the bottom so that we can navigate
-    between e.g. list of communities, list of trails, etc. -->
 
     <!-- Templates -->
     <template id="trail-list-tpl">
@@ -108,11 +115,12 @@
             <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
           </div>
           <div class="details-right light-text">
-            <small>Share your hike on: </small>
+            <!-- <small>Share your hike on: </small> -->
           </div>
         </div>
         <div class="content-body"> 
           <div>{{trail.description}}</div>
+          <a class="btn btn-block">Show Map</a>
         </div>
       </div>
     </template>
