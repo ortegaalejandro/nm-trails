@@ -110,9 +110,8 @@ var trailList = Vue.component('trail-list', {
         return this.sortKeys;
       }
       // TODO: search by community
-      // TODO: fuzzy text search
       return _.filter(this.sortKeys, function(key) {
-        return this.trails[key].name.indexOf(this.searchQuery) != -1;
+        return fuzzysearch(this.searchQuery.toLowerCase(), this.trails[key].name.toLowerCase());
       }, this);
     },
   },
