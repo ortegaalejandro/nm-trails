@@ -1,9 +1,10 @@
 
-var sortByDistance = function(keys, entities, userPosition) {
+// Sorts the keys by the distances to the corresponding entities from the userCoords.
+var sortByDistance = function(keys, entities, userCoords) {
   keys.sort(function(a, b) {
     var entityA = entities[a];
     var entityB = entities[b];
-    var locCurrent = new LatLon(userPosition.coords.latitude, userPosition.coords.longitude);
+    var locCurrent = new LatLon(userCoords.latitude, userCoords.longitude);
     var locA = new LatLon(entityA.coords.latitude, entityA.coords.longitude);
     var locB = new LatLon(entityB.coords.latitude, entityB.coords.longitude);
     var distA = locA.distanceTo(locCurrent);
@@ -51,6 +52,38 @@ var TrailData = {
       return communities[id];
     });
   },
+
+  /**
+   * Wrapper around watching the geolocation with additional caching in localStorage.
+   */
+  watchPosition: function(success) {
+    // Calls back immediately if there is a cached location available,
+    // and calls back a second time when an updated location is computed.
+    if ("geolocation" in navigator) {
+      /* geolocation is available */
+
+      // Pull last coordinates from local cache first if available
+      var lastCoords = window.localStorage.getItem('lastCoords');
+      if (lastCoords != null) {
+        success(JSON.parse(lastCoords));
+      }
+
+      // Configure callback for geolocation
+      return navigator.geolocation.watchPosition(function(position) {
+        var coords = {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        };
+        window.localStorage.setItem('lastCoords', JSON.stringify(coords));
+        console.log('New coordinates: ' + coords.latitude + ', ' + coords.longitude);
+        success(coords);
+      }, function(err) {
+        console.warn('ERROR(' + err.code + '): ' + err.message);
+      });
+    } else {
+      console.warn('Geolocation API not available in this browser.');
+    }
+  },
 };
 
 
@@ -63,28 +96,32 @@ var trailList = Vue.component('trail-list', {
     return {
       trails: null,
       sortKeys: null,
+      watcherId: null,
     }
   },
 
-  // This gets executed when this view-model is created
+  // This gets executed when this component is created
   created: function() {
     // Load the data from our static JSON files
     TrailData.getTrails().then(function(trails) {
       this.trails = trails;
       this.sortKeys = Object.keys(this.trails);
     }.bind(this)).then(function() {
-      if ("geolocation" in navigator) {
-        /* geolocation is available */
-        navigator.geolocation.getCurrentPosition(this.sortTrails);
-      } else {
-        /* geolocation IS NOT available */
-      }
+      this.watcherId = TrailData.watchPosition(this.sortTrails);
     }.bind(this));
   },
 
+  beforeDestroy: function() {
+    // Stop watching the geolocation (unregister the sortTrails callback)
+    // when this component is destroyed
+    if (this.watcherId != null) {
+      navigator.geolocation.clearWatch(this.watcherId);
+    }
+  },
+
   methods: {
-    sortTrails: function(position) {
-      sortByDistance(this.sortKeys, this.trails, position);
+    sortTrails: function(coords) {
+      sortByDistance(this.sortKeys, this.trails, coords);
     },
   }
 })
@@ -151,6 +188,7 @@ var communityList = Vue.component('community-list', {
     return {
       communities: null,
       sortKeys: null,
+      watcherId: null,
     }
   },
 
@@ -161,18 +199,19 @@ var communityList = Vue.component('community-list', {
       this.communities = data;
       this.sortKeys = Object.keys(this.communities);
     }.bind(this)).then(function() {
-      if ("geolocation" in navigator) {
-        /* geolocation is available */
-        navigator.geolocation.getCurrentPosition(this.sortCommunities);
-      } else {
-        /* geolocation IS NOT available */
-      }
+      this.watcherId = TrailData.watchPosition(this.sortCommunities);
     }.bind(this));
   },
 
+  beforeDestroy: function() {
+    if (this.watcherId != null) {
+      navigator.geolocation.clearWatch(this.watcherId);
+    }
+  },
+
   methods: {
-    sortCommunities: function(position) {
-      sortByDistance(this.sortKeys, this.communities, position);
+    sortCommunities: function(coords) {
+      sortByDistance(this.sortKeys, this.communities, coords);
     }
   }
 })
