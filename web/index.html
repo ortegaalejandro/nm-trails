@@ -19,10 +19,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Include the compiled Ratchet CSS -->
-    <link href="static/css/ratchet.css" rel="stylesheet">
+    <link href="static/css/ratchet.min.css" rel="stylesheet">
 
     <!-- Include the compiled Ratchet JS -->
-    <script src="static/js/ratchet.js"></script>
+    <script src="static/js/ratchet-modified.js"></script>
 
     <!-- Include Trails-specific CSS -->
     <link href="static/css/app.css" rel="stylesheet">
@@ -37,8 +37,21 @@
     <header id="header" class="bar bar-nav">
       <!-- <router-link to="/trails" class="icon icon-left-nav pull-left"></router-link> -->
       <a href="javascript: window.history.back();" class="icon icon-left-nav pull-left"></a>
+      <a href="#share-modal" class="icon icon-more-vertical pull-right"></a>
       <h1 class="title">{{ title }}</h1>
     </header>
+
+    <div id="share-modal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#share-modal"></a>
+        <h1 class="title">Share</h1>
+      </header>
+
+      <div class="content">
+        <a class="btn btn-block">Share on Facebook</a>
+        <a class="btn btn-block">Share on Twitter</a>
+      </div>
+    </div>
 
     <!-- Footer tab bar -->
     <nav id="tab-bar" class="bar bar-tab">
