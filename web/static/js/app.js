@@ -98,6 +98,7 @@ var trailList = Vue.component('trail-list', {
       sortKeys: null,
       watcherId: null,
       searchQuery: null,
+      // community: null,
     }
   },
 
@@ -106,12 +107,19 @@ var trailList = Vue.component('trail-list', {
       if (this.sortKeys == null) {
         return [];
       }
-      if (!this.searchQuery) {
+      if (!this.searchQuery && !this.$route.query.community) {
         return this.sortKeys;
       }
       // TODO: search by community
       return _.filter(this.sortKeys, function(key) {
-        return fuzzysearch(this.searchQuery.toLowerCase(), this.trails[key].name.toLowerCase());
+        var trail = this.trails[key];
+        if (this.$route.query.community && this.$route.query.community != trail.community) {
+          return false;
+        }
+        if (!this.searchQuery) {
+          return true;
+        }
+        return fuzzysearch(this.searchQuery.toLowerCase(), trail.name.toLowerCase());
       }, this);
     },
   },

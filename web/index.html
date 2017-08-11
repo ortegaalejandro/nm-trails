@@ -55,15 +55,15 @@
 
     <!-- Footer tab bar -->
     <nav id="tab-bar" class="bar bar-tab">
-      <router-link to="/communities" class="tab-item">
-        <span class="icon icon-search"></span>
-        <span class="tab-label">Search Communities</span>
-      </router-link>
-
       <a href="#" class="tab-item">
         <span class="icon icon-list"></span>
-        <span class="tab-label">Trails List</span>
+        <span class="tab-label">Trails</span>
       </a>
+
+      <router-link to="/communities" class="tab-item">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">Communities</span>
+      </router-link>
     </nav>
 
     <!-- Facebook JavaScript SDK -->
@@ -87,7 +87,7 @@
     <template id="trail-list-tpl">
       <div>
         <div class="search-bar">
-          <input v-model="searchQuery" type="search" placeholder="Search">
+          <input v-model="searchQuery" type="search" placeholder="Find by name..">
         </div>
         <div>
           <ul class="table-view">
@@ -98,6 +98,9 @@
                v-bind:key="key">
             </trail-listing>
           </ul>
+          <div class="content-body" v-if="filteredKeys == null || filteredKeys.length == 0">
+            No trails found.
+          </div>
         </div>
       </div>
     </template>
@@ -168,7 +171,7 @@
           <!-- TODO: Add logos for the communities pulled left -->
           <!-- <img v-bind:src="trail.image_url" /> -->
           <div>{{ community.name }}</div>
-          <div><small>{{community.location}}, {{community.description}}</small></div>
+          <div><small>{{community.location}}</small></div>
         </a>
       </li>
     </template>
@@ -179,10 +182,32 @@
       </div>
       <div v-else>
         <img v-bind:src="community.banner_image_url" class="banner" />
+        <img v-if="community.image_url" v-bind:src="community.image_url" class="banner" />
         <div class="content-body"> 
           <div>{{ community.name }}</div>
-          <div><small>{{community.location}}, {{community.description}}</small></div>
+          <div><small>{{community.location}}</small></div>
+          <div>{{community.description}}</div>
         </div>
+        <ul class="table-view">
+          <li class="table-view-cell">
+            <router-link :to="'/trails?community=' + id" class="navigate-right">
+              Walking and Hiking Trails
+            </router-link>
+          </li>
+          <li v-if="community.resources_url" class="table-view-cell">
+            <a :href="community.resources_url" class="navigate-right">
+              Additional Resources
+            </a>
+          </li>
+          <li v-if="community.resources_url" class="table-view-cell">
+            Trail Area Maps
+          </li>
+          <li v-for="map in community.map_images" class="table-view-cell">
+            <a :href="map.url" class="navigate-right">
+              {{ map.name }}
+            </a>
+          </li>
+        </ul>
       </div>
     </template>
 

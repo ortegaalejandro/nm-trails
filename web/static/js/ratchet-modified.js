@@ -160,6 +160,11 @@
 
 /* global _gaq: true */
 
+/**
+ * Stephen Koo (August 11, 2017):
+ * Disable pushjs to prevent conflict with Vue
+ */
+/*
 !(function () {
   'use strict';
 
@@ -253,6 +258,7 @@
 
     return target;
   };
+*/
 
 
   // Main event handlers (touchend, popstate)
