@@ -97,7 +97,24 @@ var trailList = Vue.component('trail-list', {
       trails: null,
       sortKeys: null,
       watcherId: null,
+      searchQuery: null,
     }
+  },
+
+  computed: {
+    filteredKeys: function() {
+      if (this.sortKeys == null) {
+        return [];
+      }
+      if (!this.searchQuery) {
+        return this.sortKeys;
+      }
+      // TODO: search by community
+      // TODO: fuzzy text search
+      return _.filter(this.sortKeys, function(key) {
+        return this.trails[key].name.indexOf(this.searchQuery) != -1;
+      }, this);
+    },
   },
 
   // This gets executed when this component is created

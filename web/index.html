@@ -85,14 +85,21 @@
 
     <!-- Templates -->
     <template id="trail-list-tpl">
-      <ul class="table-view">
-        <trail-listing
-           v-for="key in sortKeys"
-           v-bind:trail="trails[key]"
-           v-bind:trail-id="key"
-           v-bind:key="key">
-        </trail-listing>
-      </ul>
+      <div>
+        <div class="search-bar">
+          <input v-model="searchQuery" type="search" placeholder="Search">
+        </div>
+        <div>
+          <ul class="table-view">
+            <trail-listing
+               v-for="key in filteredKeys"
+               v-bind:trail="trails[key]"
+               v-bind:trail-id="key"
+               v-bind:key="key">
+            </trail-listing>
+          </ul>
+        </div>
+      </div>
     </template>
 
     <template id="trail-listing-tpl">
@@ -182,6 +189,9 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Underscore.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
     <!-- LatLon script -->
     <script src="static/js/latlon-spherical.js"></script>

@@ -32,6 +32,16 @@ div.jumbotron > div.details-right {
 	padding: 4px;
 }
 
+.search-bar {
+	margin-top: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.search-bar + div {
+	margin-top: -10px;
+}
+
 .banner {
 	width: 100%;
 }
