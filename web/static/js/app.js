@@ -1,3 +1,18 @@
+
+var sortByDistance = function(keys, entities, userPosition) {
+  keys.sort(function(a, b) {
+    var entityA = entities[a];
+    var entityB = entities[b];
+    var locCurrent = new LatLon(userPosition.coords.latitude, userPosition.coords.longitude);
+    var locA = new LatLon(entityA.coords.latitude, entityA.coords.longitude);
+    var locB = new LatLon(entityB.coords.latitude, entityB.coords.longitude);
+    var distA = locA.distanceTo(locCurrent);
+    var distB = locB.distanceTo(locCurrent);
+    return distA - distB;
+  });
+};
+
+
 // Wrapper around fetching of the JSON data to avoid fetching twice in a session
 var TrailData = {
   _trails: null,
@@ -47,6 +62,7 @@ var trailList = Vue.component('trail-list', {
   data: function() {
     return {
       trails: null,
+      sortKeys: null,
     }
   },
 
@@ -55,8 +71,22 @@ var trailList = Vue.component('trail-list', {
     // Load the data from our static JSON files
     TrailData.getTrails().then(function(trails) {
       this.trails = trails;
+      this.sortKeys = Object.keys(this.trails);
+    }.bind(this)).then(function() {
+      if ("geolocation" in navigator) {
+        /* geolocation is available */
+        navigator.geolocation.getCurrentPosition(this.sortTrails);
+      } else {
+        /* geolocation IS NOT available */
+      }
     }.bind(this));
   },
+
+  methods: {
+    sortTrails: function(position) {
+      sortByDistance(this.sortKeys, this.trails, position);
+    },
+  }
 })
 
 Vue.component('trail-listing', {
@@ -120,6 +150,7 @@ var communityList = Vue.component('community-list', {
   data: function() {
     return {
       communities: null,
+      sortKeys: null,
     }
   },
 
@@ -128,8 +159,22 @@ var communityList = Vue.component('community-list', {
     // Load the data from our static JSON files
     TrailData.getCommunities().then(function(data) {
       this.communities = data;
+      this.sortKeys = Object.keys(this.communities);
+    }.bind(this)).then(function() {
+      if ("geolocation" in navigator) {
+        /* geolocation is available */
+        navigator.geolocation.getCurrentPosition(this.sortCommunities);
+      } else {
+        /* geolocation IS NOT available */
+      }
     }.bind(this));
   },
+
+  methods: {
+    sortCommunities: function(position) {
+      sortByDistance(this.sortKeys, this.communities, position);
+    }
+  }
 })
 
 Vue.component('community-listing', {

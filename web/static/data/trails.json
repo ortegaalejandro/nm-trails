@@ -8,7 +8,7 @@
         "dogs_allowed": false,
         "map_image_url": "/static/images/maps/Map-1.jpg",
         "static_map_url": "http://maps.apple.com/maps?daddr=36.01475555,-106.9639361",
-        "geo": {
+        "coords": {
             "latitude": 36.01475555,
             "longitude": -106.9639361
         },
@@ -24,6 +24,10 @@
         "dogs_allowed": false,
         "map_image_url": "/static/images/maps/Map-2.jpg",
         "static_map_url": "http://maps.apple.com/maps?daddr=36.01315277,-106.9622138",
+        "coords": {
+            "latitude": 36.01315277,
+            "longitude": -106.9622138
+        },
         "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.013137389639155%2C-106.96244806048816&z=18",
         "share_text": "Going for a walk from the Village Offices to Saveway Market"
     },
@@ -36,6 +40,10 @@
         "dogs_allowed": false,
         "map_image_url": "/static/images/maps/Map-3.jpg",
         "static_map_url": "http://maps.apple.com/maps?daddr=36.01241667,-106.9610528",
+        "coords": {
+            "latitude": 36.01241667,
+            "longitude": -106.9610528
+        },
         "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.01226520918226%2C-106.96065634486621&z=18",
         "share_text": "Going for a walk around the Library Loop Trail"
     }

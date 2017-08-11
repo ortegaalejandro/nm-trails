@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <title>Trails Across New Mexico</title>
 
+    <!-- https://webdesign.tutsplus.com/articles/quick-tip-give-your-website-an-ios-home-screen-icon--webdesign-10067 -->
+    <link rel="apple-touch-icon" sizes="29x29" href="static/images/icons/iPad-1X-29pt.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="static/images/icons/iPad-1x76pt.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="static/images/icons/iPhone-60pt.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="static/images/icons/iPad-2x76pt.png" />
+
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
@@ -68,10 +74,10 @@
     <template id="trail-list-tpl">
       <ul class="table-view">
         <trail-listing
-           v-for="(trail, trailId) in trails"
-           v-bind:trail="trail"
-           v-bind:trail-id="trailId"
-           v-bind:key="trailId">
+           v-for="key in sortKeys"
+           v-bind:trail="trails[key]"
+           v-bind:trail-id="key"
+           v-bind:key="key">
         </trail-listing>
       </ul>
     </template>
@@ -128,10 +134,10 @@
     <template id="community-list-tpl">
       <ul class="table-view">
         <community-listing
-           v-for="(community, communityId) in communities"
-           v-bind:community="community"
-           v-bind:community-id="communityId"
-           v-bind:key="communityId">
+           v-for="key in sortKeys"
+           v-bind:community="communities[key]"
+           v-bind:community-id="key"
+           v-bind:key="key">
         </community-listing>
       </ul>
     </template>
@@ -163,6 +169,9 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- LatLon script -->
+    <script src="static/js/latlon-spherical.js"></script>
 
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue"></script>
