@@ -10,7 +10,7 @@
         "static_map_url": "http://maps.apple.com/maps?daddr=36.01475555,-106.9639361",
         "geo": {
             "latitude": 36.01475555,
-            "longitude": -106.9639361,
+            "longitude": -106.9639361
         },
         "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.01459537421788%2C-106.96454957125133&z=17",
         "share_text": "Going for a walk on the new sidewalks in Cuba"
