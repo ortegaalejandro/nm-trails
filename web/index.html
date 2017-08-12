@@ -6,10 +6,10 @@
     <title>Trails Across New Mexico</title>
 
     <!-- https://webdesign.tutsplus.com/articles/quick-tip-give-your-website-an-ios-home-screen-icon--webdesign-10067 -->
-    <link rel="apple-touch-icon" sizes="29x29" href="static/images/icons/iPad-1X-29pt.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="static/images/icons/iPad-1x76pt.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="static/images/icons/iPhone-60pt.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="static/images/icons/iPad-2x76pt.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="static/images/icons/Icon-57.jpg" />
+    <link rel="apple-touch-icon" sizes="72x72" href="static/images/icons/Icon-72.jpg" />
+    <link rel="apple-touch-icon" sizes="114x114" href="static/images/icons/Icon-114.jpg" />
+    <link rel="apple-touch-icon" sizes="144x144" href="static/images/icons/Icon-144.jpg" />
 
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -129,7 +129,6 @@
             <div>
               <a class="directions-icon" :href="trail.static_map_url"></a>
               <dog-icon :allowed="trail.dogs_allowed"></dog-icon>
-              <a class="map-icon" :href="trail.live_map_url"></a>
             </div>
             <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
           </div>
@@ -137,9 +136,9 @@
             <!-- <small>Share your hike on: </small> -->
           </div>
         </div>
-        <div class="content-body"> 
+        <div class="content-body">
           <div>{{trail.description}}</div>
-          <a class="btn btn-block">Show Map</a>
+          <a class="btn btn-block" :href="trail.live_map_url">Show Map</a>
         </div>
       </div>
     </template>
@@ -160,6 +159,7 @@
         <router-link v-bind:to="'/communities/' + communityId" class="navigate-right">
           <!-- TODO: Add logos for the communities pulled left -->
           <!-- <img v-bind:src="trail.image_url" /> -->
+          <div><img v-bind:src="community.image_url" class="media-object pull-left"></div>
           <div>{{ community.name }}</div>
           <div><small>{{community.location}}, {{community.description}}</small></div>
         </a>
@@ -172,7 +172,7 @@
       </div>
       <div v-else>
         <img v-bind:src="community.banner_image_url" class="banner" />
-        <div class="content-body"> 
+        <div class="content-body">
           <div>{{ community.name }}</div>
           <div><small>{{community.location}}, {{community.description}}</small></div>
         </div>

@@ -6,22 +6,22 @@
             "latitude": 36.01475555,
             "longitude": -106.9639361
         },
-        "description": "A guide to places near Cuba, New Mexico",
+        "description": "A guide to places to walk and hike near Cuba, New Mexico",
         "banner_image_url": "/static/images/GuideLogo.png",
-        "image_url": "/static/images/DSCN1033.JPG",
-        "resources_url": "",
+        "image_url": "/static/images/SICLogo.jpeg",
+        "resources_url": "https://www.stepintocuba.org",
         "trails": [1, 2, 3]
     },
     "2": {
-    	"name": "Silver City",
-    	"location": "Silver City",
+    	"name": "Raton",
+    	"location": "Raton",
     	"coords": {
     		"latitude": 32.77096,
     		"longitude": -108.275229
     	},
-    	"description": "",
-    	"banner_image_url": "",
-    	"image_url": "",
+    	"description": "A guide to places to walk and hike near Raton, New Mexico",
+    	"banner_image_url": "/static/images/RRR.png",
+    	"image_url": "/static/images/RRRLogo.png",
     	"resources_url": "",
     	"trails": []
     }
