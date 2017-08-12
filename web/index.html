@@ -173,8 +173,10 @@
       <div v-else>
         <img v-bind:src="community.banner_image_url" class="banner" />
         <div class="content-body">
-          <div>{{ community.name }}</div>
-          <div><small>{{community.location}}, {{community.description}}</small></div>
+          <div class="content-body">
+            <div>{{community.detail_description}}</div>
+          </div>
+          <a class="btn btn-block" :href="community.resources_url">More Information</a>
         </div>
       </div>
     </template>
