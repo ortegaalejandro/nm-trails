@@ -6,9 +6,10 @@
             "latitude": 36.01475555,
             "longitude": -106.9639361
         },
-        "description": "A guide to places near Cuba, New Mexico",
+        "description": "A guide to places to walk and hike near Cuba, New Mexico",
         "banner_image_url": "/static/images/GuideLogo.png",
         "image_url": "static/images/DSCN1033.JPG",
+        "logo_url": "static/images/SICLogo.jpeg",
         "map_images": [
         	{
         		"name": "Step Into Cuba Trails",
@@ -19,7 +20,7 @@
         		"url": "static/images/maps/CubaCDT.png"
         	}
         ],
-        "resources_url": "",
+        "resources_url": "https://www.stepintocuba.org",
         "trails": [1, 2, 3]
     },
     "2": {
@@ -40,5 +41,12 @@
     	],
     	"resources_url": "",
     	"trails": []
+    },
+    "3": {
+    	"name": "Raton",
+    	"location": "Raton",
+    	"description": "A guide to places to walk and hike near Raton, New Mexico",
+    	"banner_image_url": "/static/images/RRR.png",
+    	"logo_url": "/static/images/RRRLogo.png"
     }
 }
