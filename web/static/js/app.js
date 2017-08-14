@@ -321,7 +321,13 @@ vm = new Vue({
     '$route': function(to, from) {
       var toDepth = to.path.split('/').length
       var fromDepth = from.path.split('/').length
-      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+      if (toDepth < fromDepth) {
+        this.transitionName = 'slide-right';
+      } else if (toDepth > fromDepth) {
+        this.transitionName = 'slide-left';
+      } else {
+        this.transitionName = '';
+      }
       console.log(this.transitionName);
     }
   },

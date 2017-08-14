@@ -69,7 +69,7 @@
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
       <div id="app">
-        <transition name="slide-left" mode="out-in">
+        <transition :name="transitionName" class="transition-box">
           <router-view></router-view>
         </transition>
       </div>
