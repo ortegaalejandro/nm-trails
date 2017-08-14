@@ -5,9 +5,19 @@ Reimagined as a [Progressive Web App](https://developers.google.com/web/fundamen
 ## Files
 
 ```
+README.md 		- this file
+.gitignore 		- configuration for what files Git should ignore for any new commits
 gulpfile.js 	- configuration for Gulp tasks, currently just configuration for sw-precache
 package.json 	- metadata for this project, including the npm dependencies
 web/ 			- directory containing static assets to be hosted online
+	index.html 			- the base HTML file for the app
+	service-worker.js 	- service worker script that manages caching (generated automatically)
+	static/				- directory containing all static files for the app
+		css/			- CSS stylesheets
+		js/				- JavaScript code
+		images/			- graphics and photos
+		fonts/			- font files
+		data/			- JSON files containing trail data
 ```
 
 ## Setting up development environment
@@ -17,7 +27,8 @@ depending on your operating system and package manager ([here are the
 instructions for Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04) for example). After they're installed, you
 should be able to run the following to check the versions of `node` and `npm`:
 
-	node --version npm --version
+	node --version
+	npm --version
 
 Now we install the prerequisite Node packages that are defined in our
 `package.json`, such as `sw-precache`:
@@ -41,4 +52,3 @@ will be ignored by Git). Once that is ready, then you can just perform a one-cli
 deploy:
 
 	npm run deploy
-	
