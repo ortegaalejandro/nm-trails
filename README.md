@@ -43,7 +43,7 @@ Now we should be ready to run the development server:
 
     npm run server
 
-You should be able to view the app now at [http://localhost:8000/]. If you make any
+You should be able to view the app now at [http://localhost:8000/](http://localhost:8000/). If you make any
 changes to your code, they should be available after refreshing the browser (you
 may have to [disable the cache](https://www.technipages.com/google-chrome-how-to-completely-disable-cache)
 first).
