@@ -1,3 +1,9 @@
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden
+}
+
 div.jumbotron {
 	height: 200px;
 	width: 100%;
@@ -100,3 +106,32 @@ div.trail-listing-cell-label {
 div.content-body {
 	padding: 8px 15px 8px 15px;
 }
+
+.content > .btn-block {
+	margin-top: 10px;
+}
+
+#fb-share-button {
+    color: #fff;
+    background-color: #3b5998;
+    border: 1px solid #3b5998;
+}
+
+#twitter-share-button {
+    color: #fff;
+    background-color: #326ada;
+    border: 1px solid #326ada;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 0.5s ease;
+}
+
+.slide-left-enter, .slight-right-leave-active {
+  transform: translate(100%, 0);
+}
+.slide-left-leave-active, .slight-right-enter {
+  transform: translate(-100%, 0);
+}
+

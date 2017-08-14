@@ -65,6 +65,7 @@ var TrailData = {
       // Pull last coordinates from local cache first if available
       var lastCoords = window.localStorage.getItem('lastCoords');
       if (lastCoords != null) {
+        // console.log('Got cached coordinates: ' +)
         success(JSON.parse(lastCoords));
       }
 
@@ -310,6 +311,19 @@ var bus = new Vue();
 vm = new Vue({
   // Bind this view-model to the element with id="app"
   el: '#app',
+
+  data: {
+    transitionName: '',
+  },
+
+  watch: {
+    '$route': function(to, from) {
+      var toDepth = to.path.split('/').length
+      var fromDepth = from.path.split('/').length
+      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+      console.log(this.transitionName);
+    }
+  },
 
   // "Inject" the router we defined above into the application
   router: router,

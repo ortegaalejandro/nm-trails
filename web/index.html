@@ -37,7 +37,7 @@
     <header id="header" class="bar bar-nav">
       <!-- <router-link to="/trails" class="icon icon-left-nav pull-left"></router-link> -->
       <a href="javascript: window.history.back();" class="icon icon-left-nav pull-left"></a>
-      <a href="#share-modal" class="icon icon-more-vertical pull-right"></a>
+      <a href="#share-modal" class="icon icon-share pull-right"></a>
       <h1 class="title">{{ title }}</h1>
     </header>
 
@@ -47,9 +47,9 @@
         <h1 class="title">Share</h1>
       </header>
 
-      <div class="content">
-        <a class="btn btn-block">Share on Facebook</a>
-        <a class="btn btn-block">Share on Twitter</a>
+      <div class="content content-body">
+        <a class="btn btn-block" id="fb-share-button">Share on Facebook</a>
+        <!-- <a class="btn btn-block" id="twitter-share-button">Share on Twitter</a> -->
       </div>
     </div>
 
@@ -66,20 +66,12 @@
       </router-link>
     </nav>
 
-    <!-- Facebook JavaScript SDK -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=168532903209292";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
       <div id="app">
-        <router-view></router-view>
+        <transition name="slide-left" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
 
@@ -136,19 +128,18 @@
         <div class="jumbotron">
           <img v-bind:src="trail.image_url" class="jumbotron" />
           <div class="details light-text">
-            <div>
-              <a class="directions-icon" :href="trail.static_map_url"></a>
-              <dog-icon :allowed="trail.dogs_allowed"></dog-icon>
-            </div>
+            <div>{{trail.name}}</div>
             <div><small>{{trail.distance}}, {{trail.difficulty}}</small></div>
           </div>
           <div class="details-right light-text">
+              <dog-icon :allowed="trail.dogs_allowed"></dog-icon>
             <!-- <small>Share your hike on: </small> -->
           </div>
         </div>
         <div class="content-body">
           <div>{{trail.description}}</div>
-          <a class="btn btn-block" :href="trail.live_map_url">Show Map</a>
+          <a class="btn btn-block" :href="trail.live_map_url">Open Map</a>
+          <a class="btn btn-block" :href="trail.static_map_url">Get Directions</a>
         </div>
       </div>
     </template>
@@ -211,9 +202,34 @@
       </div>
     </template>
 
-
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Facebook SDK initialization -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1388499224598425',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+      $("#fb-share-button").click(function() {
+        FB.ui({
+          method: 'share',
+          href: 'http://localhost:8000',  // Replace with app root thingy
+        }, function(response){});
+      })
+    </script>
 
     <!-- Underscore.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
