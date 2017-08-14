@@ -100,7 +100,7 @@ var trailList = Vue.component('trail-list', {
       sortKeys: null,
       watcherId: null,
       searchQuery: null,
-      // community: null,
+      community: null,
     }
   },
 
@@ -126,6 +126,13 @@ var trailList = Vue.component('trail-list', {
     },
   },
 
+  watch: {
+    // call again the method if the route changes
+    '$route': function(to, from) {
+      this.fetchCommunity(to);
+    }
+  },
+
   // This gets executed when this component is created
   created: function() {
     // Load the data from our static JSON files
@@ -135,6 +142,8 @@ var trailList = Vue.component('trail-list', {
     }.bind(this)).then(function() {
       this.watcherId = TrailData.watchPosition(this.sortTrails);
     }.bind(this));
+
+    this.fetchCommunity(this.$route);
   },
 
   beforeDestroy: function() {
@@ -149,6 +158,15 @@ var trailList = Vue.component('trail-list', {
     sortTrails: function(coords) {
       sortByDistance(this.sortKeys, this.trails, coords);
     },
+    fetchCommunity: function(toRoute) {
+      this.community = null;
+      console.log(toRoute);
+      if (toRoute.query.community) {
+        TrailData.getCommunity(toRoute.query.community).then(function(community) {
+          this.community = community;
+        }.bind(this));
+      }
+    }
   }
 })
 

@@ -11,6 +11,16 @@
     <link rel="apple-touch-icon" sizes="114x114" href="static/images/icons/Icon-114.jpg" />
     <link rel="apple-touch-icon" sizes="144x144" href="static/images/icons/Icon-144.jpg" />
 
+    <!-- You can use Open Graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <!--
+    <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="Your description" />
+    <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+    -->
+
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
@@ -83,6 +93,11 @@
         </div>
         <div>
           <ul class="table-view">
+            <li class="table-view-cell trail-listing-cell" v-if="community != null">
+              <div>
+                Only showing trails for {{ community.name }}.
+              </div>
+            </li>
             <trail-listing
                v-for="key in filteredKeys"
                v-bind:trail="trails[key]"
