@@ -123,15 +123,17 @@ div.content-body {
     border: 1px solid #326ada;
 }
 
-.slide-leave-active,
-.slide-enter-active {
+.slide-left-to-active,
+.slide-right-to-active,
+.slide-left-enter-active,
+.slide-right-enter-active {
   transition: 0.5s ease;
 }
 
-.slide-left-enter, .slight-right-leave-active {
+.slide-left-enter, .slight-right-to-active {
   transform: translate(100%, 0);
 }
-.slide-left-leave-active, .slight-right-enter {
+.slide-left-to-active, .slight-right-enter {
   transform: translate(-100%, 0);
 }
 

@@ -5,8 +5,8 @@ var sortByDistance = function(keys, entities, userCoords) {
     var entityA = entities[a];
     var entityB = entities[b];
     var locCurrent = new LatLon(userCoords.latitude, userCoords.longitude);
-    var locA = new LatLon(entityA.coords.latitude, entityA.coords.longitude);
-    var locB = new LatLon(entityB.coords.latitude, entityB.coords.longitude);
+    var locA = new LatLon(entityA.latitude, entityA.longitude);
+    var locB = new LatLon(entityB.latitude, entityB.longitude);
     var distA = locA.distanceTo(locCurrent);
     var distB = locB.distanceTo(locCurrent);
     return distA - distB;
@@ -65,8 +65,9 @@ var TrailData = {
       // Pull last coordinates from local cache first if available
       var lastCoords = window.localStorage.getItem('lastCoords');
       if (lastCoords != null) {
-        // console.log('Got cached coordinates: ' +)
-        success(JSON.parse(lastCoords));
+        lastCoords = JSON.parse(lastCoords);
+        console.log('Using cached coordinates: ' + lastCoords.latitude + ', ' + lastCoords.longitude);
+        success(lastCoords);
       }
 
       // Configure callback for geolocation
@@ -76,7 +77,7 @@ var TrailData = {
           longitude: position.coords.longitude,
         };
         window.localStorage.setItem('lastCoords', JSON.stringify(coords));
-        console.log('New coordinates: ' + coords.latitude + ', ' + coords.longitude);
+        console.log('Received new coordinates: ' + coords.latitude + ', ' + coords.longitude);
         success(coords);
       }, function(err) {
         console.warn('ERROR(' + err.code + '): ' + err.message);
