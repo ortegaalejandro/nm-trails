@@ -56,3 +56,7 @@ will be ignored by Git). Once that is ready, then you can just perform a one-cli
 deploy:
 
     npm run deploy
+
+If you run into a permission error on the private key file, this might help:
+
+    chmod 0600 viva_connects_rsa
