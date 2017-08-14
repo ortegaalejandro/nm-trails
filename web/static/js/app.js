@@ -21,7 +21,7 @@ var TrailData = {
 
   getTrails: function() {
     if (this._trails == null) {
-      return $.getJSON('/static/data/trails.json').then(function(trails) {
+      return $.getJSON('static/data/trails.json').then(function(trails) {
         this._trails = trails;
         return trails;
       }.bind(this))
@@ -38,7 +38,7 @@ var TrailData = {
 
   getCommunities: function() {
     if (this._communities == null) {
-      return $.getJSON('/static/data/communities.json').then(function(communities) {
+      return $.getJSON('static/data/communities.json').then(function(communities) {
         this._communities = communities;
         return communities;
       }.bind(this))
