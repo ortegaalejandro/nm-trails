@@ -229,7 +229,7 @@
       $("#fb-share-button").click(function() {
         FB.ui({
           method: 'share',
-          href: 'https://viva-connects.org/nm-trails/trails',  // Replace with app root thingy
+          href: window.location.href,
         }, function(response){});
       })
     </script>
