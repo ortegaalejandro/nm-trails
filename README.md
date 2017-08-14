@@ -5,11 +5,12 @@ Reimagined as a [Progressive Web App](https://developers.google.com/web/fundamen
 ## Files
 
 ```
-README.md       - this file
-.gitignore      - configuration for what files Git should ignore for any new commits
-gulpfile.js     - configuration for Gulp tasks, currently just configuration for sw-precache
-package.json    - metadata for this project, including the npm dependencies
-web/            - directory containing static assets to be hosted online
+README.md           - this file
+.gitignore          - configuration for what files Git should ignore for any new commits
+gulpfile.js         - configuration for Gulp tasks, currently just configuration for sw-precache
+package.json        - metadata for this project, including the npm dependencies
+viva_connects_rsa   - where your private key for SSHing into viva-connects server should go
+web/                - directory containing static assets to be hosted online
     index.html          - the base HTML file for the app
     service-worker.js   - service worker script that manages caching (generated automatically)
     static/             - directory containing all static files for the app
@@ -23,9 +24,12 @@ web/            - directory containing static assets to be hosted online
 ## Setting up development environment
 
 First you'll need to install NodeJS if you haven't already. This will vary
-depending on your operating system and package manager ([here are the
-instructions for Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04) for example). After they're installed, you
-should be able to run the following to check the versions of `node` and `npm`:
+depending on your operating system and package manager.
+
+ - Try [the Node downloads page](https://nodejs.org/en/download/) if you're using macOS or Windows
+ - If you're using Linux, you might try [the package manager instructions page](https://nodejs.org/en/download/package-manager/).
+
+After they're installed, you should be able to run the following to check the versions of `node` and `npm`:
 
     node --version
     npm --version
