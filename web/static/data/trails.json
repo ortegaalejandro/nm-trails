@@ -49,5 +49,141 @@
         },
         "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.01226520918226%2C-106.96065634486621&z=18",
         "share_text": "Going for a walk around the Library Loop Trail"
-    }
+    },
+    "4": {
+        "difficulty" : "Easy",
+        "distance" : "1.0 mile",
+        "community": "1",
+        "name" : "St.Francis of Assisi Park Trail",
+        "description": "The trail circles the outside of the park along NM Highway 126, County Road 13 (to Cuba Schools) and the fenced north and west sides. Parking is available at the Eichwald Recreation Center and playground. Volunteers have planted new trees, shrubs and flowers, and placed boulders on the east and west sides of the park as well as a fence break at the northwest corner. There are benches at a kiosk at the southwest corner with information about the Continental Divide Trail and other walking activities. Nearby Destinations: Cuba Visitor Center, Cuba Schools, Catholic Church, Jemez Mountain Electric Cooperative Office, El Bruno’s Restaurant, Presciliano’s Restaurant, Subway.",
+        "image_url": "static/images/4-ParkTrail.JPG",
+        "dogs_allowed": true,
+        "map_image_url": "static/images/maps/Map-4.jpg",
+        "static_map_url": "http://maps.apple.com/maps?daddr=36.01241667,-106.9610528",
+        "coords": {
+            "latitude": 36.02190556,
+            "longitude": -106.9524755
+        },
+        "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.02174575735248%2C-106.95336341855472&z=17",
+        "share_text": "Going for a walk around St. Francis of Assisi Park Trail"
+    },
+    "5": {
+        "difficulty" : "Easy to moderately difficult",
+        "distance" : "0.25-5 miles",
+        "community": "1",
+        "name" : "Cuba School Trails",
+        "description": "The network of school cross-country trails provides many options for a short or more extended walk or hike. These trails can be entered at all hours from the access points shown. Paved parking is located outside the school fence as indicated. Loops of 0.5 miles (green loop), 1.8 miles (orange loop), 2.5 miles (black loop) are signed. There are many lovely pinon, juniper, ponderosa and oak trees. There are beautiful views of the Nacimiento Mountains, Cuba Mesa and nearby sandstone cliffs. Bring water and a snack for extended hikes.",
+        "image_url": "static/images/5-CSCCT.jpeg",
+        "dogs_allowed": false,
+        "map_image_url": "static/images/maps/Map-5.jpg",
+        "static_map_url": "http://maps.apple.com/maps?daddr=36.02695278,-106.9436805",
+        "coords": {
+            "latitude": 36.02695278,
+            "longitude": -106.9436805
+        },
+        "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.02827087915523%2C-106.94181919095462&z=17",
+        "share_text": "Going for a walk around the Cuba Schools Cross Country Trails."
+    },
+    "6": {
+        "difficulty" : "Easy to moderately difficult",
+        "distance" : "0.5 mile",
+        "community": "1",
+        "name" : "School Overlook Trail",
+        "description": "The network of school cross-country trails provides access to a spur trail on BLM land that leads to a scenic overlook of the Cuba valley. The entrance to the trail can be found along the green loop near the northeast corner of the cross country trails network. Look along the fence line for the v-gate entrance to the trail. The trail leads you across some small arroyos and up a sandstone ridge to a high point where there are beautiful views of the Nacimiento Mountains, Cuba Mesa and nearby sandstone cliffs. Bring water and a snack for extended hikes.",
+        "image_url": "static/images/5-1-BLM.JPG",
+        "dogs_allowed": false,
+        "map_image_url": "static/images/maps/Map-5-1.jpg",
+        "static_map_url": "http://maps.apple.com/maps?daddr=36.03296945,-106.9430889",
+        "coords": {
+            "latitude": 36.03296945,
+            "longitude": -106.9430889
+        },
+        "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.03288674725861%2C-106.9430959224457&z=17",
+        "share_text": "Going for a hike up the School Overlook Trail."
+    },
+    "7": {
+            "difficulty" : "Moderate to difficult",
+            "distance" : "1.8 miles",
+            "community": "1",
+            "name" : "Fisher Community Trail",
+            "description": "The Fisher Trail provides a beautiful location for walkers who want a wilderness experience within walking distance of the center of Cuba. It begins at a parking area on the Cubita Road 1 mile north of the NM 197 junction. The trail follows contours of the side of a tree covered mesa uphill and downhill until it crosses a large arroyo. It then climbs to a ridge that leads to the nearest corner of Santa Fe National Forest. Cairns (large rock pile markers) end at this point. Ambitious hikers can continue through a break in the cliff to the top of Cuba Mesa. The trail crosses from pinon~juniper woodland to ponderosa-oak forest and provides striking views of sandstone cliffs, the Nacimiento Mountains and the Village of Cuba. Wildlife sightings are frequent here. Bring water.",
+            "image_url": "static/images/6-Fisher.JPG",
+            "dogs_allowed": true,
+            "map_image_url": "static/images/maps/Map-6.jpg",
+            "static_map_url": "http://maps.apple.com/maps?daddr=36.02601111,-106.9736195",
+            "coords": {
+                "latitude": 36.02601111,
+                "longitude": -106.9736195
+            },
+            "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.025902230012974%2C-106.97347193953937&z=18",
+            "share_text": "Going for a hike up the Fisher Trail."
+        },
+    "8": {
+      "difficulty" : "Easy to moderate",
+      "distance" : "1.0 mile",
+      "community": "1",
+      "name" : "Rito San Jose Trail",
+      "description": "The Rito San Jose Trail provides a nice location for walkers who want a natural river terrace experience within walking distance of the center of Cuba. It begins at a parking area on the Cubita Road 1 mile north of the NM 197 junction and across from the Fisher Community Trail parking area. The trail runs east over a sage covered flat across a small drainage and then to the rim of a small canyon. Hikers can continue down a slope to a figure-of-eight loop along the willow-covered river terrace. The trail provides beautiful views of Cuba Mesa and the Nacimiento Mountains. The river terrace is a great place for early morning and late afternoon birdwatching. Bring water and a snack.",
+      "image_url": "static/images/7-RSJ.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/Map-7.jpg",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.02601111,-106.9736195",
+      "coords": {
+          "latitude": 36.02601111,
+          "longitude": -106.9736195
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.025902230012974%2C-106.97347193953937&z=18",
+      "share_text": "Going for a hike on the Rito San Jose Trail."
+  },
+  "9": {
+      "difficulty" : "Easy to moderate",
+      "distance" : ".25-1.25 miles",
+      "community": "1",
+      "name" : "Sandoval County Fairgrounds Trails",
+      "description": "The network of Sandoval County Fairgounds trails provides many options for a short or more extended walk or hike. These trails can be entered during daytime fairgrounds times, which can vary by season. There is no entry fee except during the annual fair, Thursday - Sunday the first week of August. Parking and access points are located outside the Sandoval County Fairgrounds Community Center as indicated. The trail loops through piñon-juniper woodland and affords many beautiful views of Cuba Mesa to the west. Bring water.",
+      "image_url": "static/images/7-1-SCFG.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/Map-7-1.jpg",
+      "static_map_url": "http://maps.apple.com/maps?daddr=35.99208333,-106.9714722",
+      "coords": {
+          "latitude": 35.99208333,
+          "longitude": -106.9714722
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=35.99146888169285%2C-106.97089701888507&z=18",
+      "share_text": "Going for a hike around the Sandoval County Fairgrounds Trails."
+  },
+  "10": {
+      "difficulty" : "Moderate to difficult",
+      "distance" : "6.2 miles",
+      "community": "1",
+      "name" : "Continental Divide Trail North/Los Pinos Trail",
+      "description": "The Continental Divide Trail North/Los Pinos Trail climbs through Santa Fe National Forest from the Nacimiento Mountain foothills to the top of the mountains in the San Pedro Parks wilderness. It begins 6 miles northeast of Cuba at the end of Forest Road #95 where a parking area and kiosk are located. The trail follows the Rito Los Pinos for 3.1 miles and ascends almost 2000 vertical feet. It continues gently uphill and is shady along its entire course. Once on top of the mountain you can turn around, follow it several more miles to the center of the San Pedro Parks, choose a number of loop trails, or walk 2700 miles to the Canadian Border. Vegetation along the trail is lush and amazingly diverse. Views are limited until you reach the top of the mountain. Water in the Rito Los Pinos must be filtered and/or treated. Bring adequate water and food for the length of your planned hike. *** Directions provided in the link above take you to Forest Road #95, please follow to end of the road to find the trail head***",
+      "image_url": "static/images/8-LosPinosTrail.JPG",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/Map-8.jpg",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.07907222,-106.9390668",
+      "coords": {
+          "latitude": 36.07907222,
+          "longitude":-106.9390668
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.102481987404076%2C-106.90537333486026&z=16",
+      "share_text": "Going for a hike on the Los Pinos/Continental Divide Trail North of Cuba."
+  },
+  "11": {
+      "difficulty" : "Moderate to difficult",
+      "distance" : "7.0 miles",
+      "community": "1",
+      "name" : "Continental Divide Trail South",
+      "description": "The Continental Divide Trail South begins 4 miles southwest of Cuba on a dirt road that runs south from mile marker 4 on NM 197. It follows the roadway approximately 1 ½ miles until - after passing sandstone cliffs - it crosses the wide Chijuilla Wash. It then follows posts and cairns (large rock pile markers) through a wide arroyo to the top of Mesa Portales. The trail takes you south along the Mesa rim for another 2 miles before descending from the Mesa and heading to La Ventana Mesa, Mount Taylor and the Mexican border, 400 miles away. you can turn around or continue at this point. There are scenic vistas along the entire route including badlands, sandstone cliffs, and mountain and mesa views from the Mesa Portales rim. You stay in pinon~juniper woodland, but shade can be scarce. Bring plenty of food and water for extended hikes.",
+      "image_url": "static/images/9-SouthCDT.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/Map-9.jpg",
+      "static_map_url": "http://maps.apple.com/maps?daddr=35.97305834,-107.0069388",
+      "coords": {
+          "latitude": 35.97305834,
+          "longitude": -107.0069388
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=35.972155560004865%2C-107.00717926022952&z=16",
+      "share_text": "Going for a hike on the South Continental Divide Trail."
+  }
 }

@@ -1,7 +1,7 @@
 {
     "1": {
         "name": "Step Into Cuba",
-        "location": "Cuba, NM",
+        "location": "Cuba",
         "coords": {
             "latitude": 36.01475555,
             "longitude": -106.9639361
@@ -33,6 +33,7 @@
     	"description": "",
     	"banner_image_url": "static/images/SCT-GuideCover.png",
     	"image_url": "",
+      "logo_url":"static/images/GrantCoLogo.png",
     	"map_images": [
     		{
     			"name": "Silver City Trails",
@@ -44,9 +45,33 @@
     },
     "3": {
     	"name": "Raton",
-    	"location": "Raton",
+    	"location": "Raton, Sugarite, Capulin",
+      "coords": {
+    		"latitude": 36.899160,
+    		"longitude": -104.435618
+    	},
     	"description": "A guide to places to walk and hike near Raton, New Mexico",
     	"banner_image_url": "static/images/RRR.png",
     	"logo_url": "static/images/RRRLogo.png"
+    },
+    "4": {
+    	"name": "Otero County Trails",
+    	"location": "Alamogordo, Tularosa, Whitesands",
+    	"coords": {
+    		"latitude": 32.77096,
+    		"longitude": -108.275229
+    	},
+    	"description": "",
+    	"banner_image_url": "static/images/TTSplash.png",
+    	"image_url": "",
+      "logo_url":"static/images/OteroCoLogo.png",
+    	"map_images": [
+    		{
+    			"name": "Otero County Trails",
+    			"url": "static/images/maps/Tulie-Overview.png"
+    		}
+    	],
+    	"resources_url": "https://viva-connects.org/wp-content/uploads/2017/06/OteroCounty_WalkingGuide.pdf",
+    	"trails": []
     }
 }
