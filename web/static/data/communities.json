@@ -1,30 +1,52 @@
 {
     "1": {
         "name": "Step Into Cuba",
-        "location": "Cuba",
+        "location": "Cuba, NM",
         "coords": {
             "latitude": 36.01475555,
             "longitude": -106.9639361
         },
         "description": "A guide to places to walk and hike near Cuba, New Mexico",
-        "banner_image_url": "/static/images/GuideLogo.png",
-        "image_url": "/static/images/SICLogo.jpeg",
+        "banner_image_url": "static/images/GuideLogo.png",
+        "image_url": "static/images/DSCN1033.JPG",
+        "logo_url": "static/images/SICLogo.jpeg",
+        "map_images": [
+        	{
+        		"name": "Step Into Cuba Trails",
+        		"url": "static/images/maps/CubaTrails.png"
+        	},
+        	{
+        		"name": "Continental Divide Trail",
+        		"url": "static/images/maps/CubaCDT.png"
+        	}
+        ],
         "resources_url": "https://www.stepintocuba.org",
-        "detail_description": "Step into Cuba is a program to promote physical activity through development of sidewalks, paths, trails, social support, and opportunities for lifestyle change. It is based in Cuba, New Mexico. It is guided by a partnership of organizations and individuals – the Step Into Cuba Alliance – and coordinated by the Nacimiento Community Foundation. Our vision is to create a healthier, and more pedestrian friendly community with opportunities for extraordinary walking and hiking on surrounding scenic public lands.",
         "trails": [1, 2, 3]
     },
     "2": {
-    	"name": "Raton",
-    	"location": "Raton",
+    	"name": "Grant County Trails",
+    	"location": "Silver City, Bayard, & Santa Clara",
     	"coords": {
     		"latitude": 32.77096,
     		"longitude": -108.275229
     	},
-    	"description": "A guide to places to walk and hike near Raton, New Mexico",
-    	"banner_image_url": "/static/images/RRR.png",
-    	"image_url": "/static/images/RRRLogo.png",
-    	"resources_url": "https://wwww.viva-connects.org",
-      "detail_description":"Ramblin’ Round Raton aims to promote healthy lifestyles through walking and hiking in Raton and on nearby public lands. Research shows walking and hiking can help us live longer and feel better. Ramblin’ Round Raton promotes use of walkways and trails on public land. We organize and support walking groups. We sponsor walking events. We advocate for walkable streets and highways. We promote development of trails, and support enhancing our walking places. Ramblin’ Round Raton is supported by an alliance established by N.M. State Parks, N.M. Department of Health, Miners’ Colfax Medical Center, Rocky Mountain Physical Therapy, Raton Department of Parks and Recreation, the National Park Service, GrowRaton! and the University of New Mexico Prevention Research Center.",
+    	"description": "",
+    	"banner_image_url": "static/images/SCT-GuideCover.png",
+    	"image_url": "",
+    	"map_images": [
+    		{
+    			"name": "Silver City Trails",
+    			"url": "static/images/maps/SilverCityTrails.png"
+    		}
+    	],
+    	"resources_url": "",
     	"trails": []
+    },
+    "3": {
+    	"name": "Raton",
+    	"location": "Raton",
+    	"description": "A guide to places to walk and hike near Raton, New Mexico",
+    	"banner_image_url": "static/images/RRR.png",
+    	"logo_url": "static/images/RRRLogo.png"
     }
 }

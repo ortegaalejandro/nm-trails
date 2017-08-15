@@ -5,8 +5,8 @@ var sortByDistance = function(keys, entities, userCoords) {
     var entityA = entities[a];
     var entityB = entities[b];
     var locCurrent = new LatLon(userCoords.latitude, userCoords.longitude);
-    var locA = new LatLon(entityA.coords.latitude, entityA.coords.longitude);
-    var locB = new LatLon(entityB.coords.latitude, entityB.coords.longitude);
+    var locA = new LatLon(entityA.latitude, entityA.longitude);
+    var locB = new LatLon(entityB.latitude, entityB.longitude);
     var distA = locA.distanceTo(locCurrent);
     var distB = locB.distanceTo(locCurrent);
     return distA - distB;
@@ -21,7 +21,7 @@ var TrailData = {
 
   getTrails: function() {
     if (this._trails == null) {
-      return $.getJSON('/static/data/trails.json').then(function(trails) {
+      return $.getJSON('static/data/trails.json').then(function(trails) {
         this._trails = trails;
         return trails;
       }.bind(this))
@@ -38,7 +38,7 @@ var TrailData = {
 
   getCommunities: function() {
     if (this._communities == null) {
-      return $.getJSON('/static/data/communities.json').then(function(communities) {
+      return $.getJSON('static/data/communities.json').then(function(communities) {
         this._communities = communities;
         return communities;
       }.bind(this))
@@ -65,7 +65,9 @@ var TrailData = {
       // Pull last coordinates from local cache first if available
       var lastCoords = window.localStorage.getItem('lastCoords');
       if (lastCoords != null) {
-        success(JSON.parse(lastCoords));
+        lastCoords = JSON.parse(lastCoords);
+        console.log('Using cached coordinates: ' + lastCoords.latitude + ', ' + lastCoords.longitude);
+        success(lastCoords);
       }
 
       // Configure callback for geolocation
@@ -75,7 +77,7 @@ var TrailData = {
           longitude: position.coords.longitude,
         };
         window.localStorage.setItem('lastCoords', JSON.stringify(coords));
-        console.log('New coordinates: ' + coords.latitude + ', ' + coords.longitude);
+        console.log('Received new coordinates: ' + coords.latitude + ', ' + coords.longitude);
         success(coords);
       }, function(err) {
         console.warn('ERROR(' + err.code + '): ' + err.message);
@@ -97,6 +99,37 @@ var trailList = Vue.component('trail-list', {
       trails: null,
       sortKeys: null,
       watcherId: null,
+      searchQuery: null,
+      community: null,
+    }
+  },
+
+  computed: {
+    filteredKeys: function() {
+      if (this.sortKeys == null) {
+        return [];
+      }
+      if (!this.searchQuery && !this.$route.query.community) {
+        return this.sortKeys;
+      }
+      // TODO: search by community
+      return _.filter(this.sortKeys, function(key) {
+        var trail = this.trails[key];
+        if (this.$route.query.community && this.$route.query.community != trail.community) {
+          return false;
+        }
+        if (!this.searchQuery) {
+          return true;
+        }
+        return fuzzysearch(this.searchQuery.toLowerCase(), trail.name.toLowerCase());
+      }, this);
+    },
+  },
+
+  watch: {
+    // call again the method if the route changes
+    '$route': function(to, from) {
+      this.fetchCommunity(to);
     }
   },
 
@@ -109,6 +142,8 @@ var trailList = Vue.component('trail-list', {
     }.bind(this)).then(function() {
       this.watcherId = TrailData.watchPosition(this.sortTrails);
     }.bind(this));
+
+    this.fetchCommunity(this.$route);
   },
 
   beforeDestroy: function() {
@@ -123,6 +158,15 @@ var trailList = Vue.component('trail-list', {
     sortTrails: function(coords) {
       sortByDistance(this.sortKeys, this.trails, coords);
     },
+    fetchCommunity: function(toRoute) {
+      this.community = null;
+      console.log(toRoute);
+      if (toRoute.query.community) {
+        TrailData.getCommunity(toRoute.query.community).then(function(community) {
+          this.community = community;
+        }.bind(this));
+      }
+    }
   }
 })
 
@@ -286,6 +330,25 @@ var bus = new Vue();
 vm = new Vue({
   // Bind this view-model to the element with id="app"
   el: '#app',
+
+  data: {
+    transitionName: '',
+  },
+
+  watch: {
+    '$route': function(to, from) {
+      var toDepth = to.path.split('/').length
+      var fromDepth = from.path.split('/').length
+      if (toDepth < fromDepth) {
+        this.transitionName = 'slide-right';
+      } else if (toDepth > fromDepth) {
+        this.transitionName = 'slide-left';
+      } else {
+        this.transitionName = '';
+      }
+      console.log(this.transitionName);
+    }
+  },
 
   // "Inject" the router we defined above into the application
   router: router,
