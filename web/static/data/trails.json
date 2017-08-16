@@ -508,5 +508,209 @@
       },
       "live_map_url": "https://www.google.com/maps/d/edit?mid=1-DhfWHJWf3oCMU6Ysue6_KLNQF8&ll=32.85400542803163%2C-108.27799946622639&z=16",
       "share_text": "Going for a hike around Little Walnut Picnic Area"
+  },
+  "31": {
+      "difficulty" : "Easy",
+      "distance" : "1.7 mile",
+      "community": "3",
+      "name" : "Roundhouse Memorial Park Trails",
+      "description": "Surface: Asphalt paving Parking: Aquatic Center, 100 Memorial Lane. Nearby Cross Streets: Sugarite Ave. & Roundhouse Rd. Martinez/E. 4th St & Memorial Ln. Open: Year-round Amenities: Dog park, benches, interpretive signs, trash cans, restrooms at the Aquatic Center.",
+      "image_url": "static/images/001-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.899160,-104.435618",
+      "coords": {
+          "latitude": 36.899160,
+          "longitude": -104.435618
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.8997569711763%2C-104.43527378193352&z=15",
+      "share_text": "Going for a walk around Roundhouse Memorial Park Trail"
+  },
+  "32": {
+      "difficulty" : "Easy",
+      "distance" : "350 feet",
+      "community": "3",
+      "name" : "Raton Regional Aquatic Center",
+      "description": "Surface: Textured anti-slip. Parking: Aquatic Center, 100 Memorial Lane. Nearby Cross Streets: Roundhouse Rd. & Memorial Ln. Martinez/E. 4th St & Memorial Ln. Open: Year-round. Call 575-445-4271 for schedule & fees Amenities: Restrooms, showers, snack bar, trash cans",
+      "image_url": "static/images/002-RRR.jpg",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.899160,-104.435618",
+      "coords": {
+          "latitude": 36.899160,
+          "longitude": -104.435618
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.8997569711763%2C-104.43527378193352&z=15",
+      "share_text": "Going for a walk around Raton Regional Aquatic Center"
+  },
+  "33": {
+      "difficulty" : "Easy",
+      "distance" : "0.25 mile",
+      "community": "3",
+      "name" : "Raton High School Track",
+      "description": "Surface: Asphalt paving. Parking: Raton Convention Center Nearby Cross Streets: S. Ninth Ave. & S. Third St. Open: Year-round except day before football games Amenities: Benches, trash cans",
+      "image_url": "static/images/003-RRR.jpg",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.892357,-104.443706",
+      "coords": {
+          "latitude": 36.892357,
+          "longitude": -104.443706
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.89142586551898%2C-104.44394268146965&z=17",
+      "share_text": "Going for a walk around Raton High School Track"
+  },
+  "34": {
+      "difficulty" : "Easy",
+      "distance" : "Boardwalk 500 ft, trail 0.5 mile",
+      "community": "3",
+      "name" : "Boardwalk & River Walk Trail",
+      "description": "Surface: Boardwalk has boards; River Walk has gravel. Parking: Sugarite Canyon State Park Visitor Center Open: Year-round Amenities: Restrooms at shower building, benches, trash cans Note: Both trails begin at Visitor Center & follow creek. Boardwalk is wheelchair accessible. ",
+      "image_url": "static/images/004-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.940195,-104.380122",
+      "coords": {
+          "latitude": 36.940195,
+          "longitude": -104.380122
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.93971958320148%2C-104.37901176563713&z=16",
+      "share_text": "Going for a walk around the Boardwalk & River Walk Trail"
+  },
+  "35": {
+      "difficulty" : "Easy to strenuous",
+      "distance" : "2.8 miles",
+      "community": "3",
+      "name" : "Coal Camp Trail",
+      "description": "Distance: 0.8 miles one way to Mine 2 entrance 0.9 miles one way to Cable Wheel House; 1.1 mile one way to Mine 3 (no structures visible) Difficulty: Easy in canyon bottom; strenuous higher up. Surface: Unpaved. Parking: Sugarite Canyon State Park Visitor Center. Open: Year-round. Amenities: Restrooms at shower building, trash cans, benches",
+      "image_url": "static/images/005-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.940195,-104.380122",
+      "coords": {
+          "latitude": 36.940195,
+          "longitude": -104.380122
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.94239500419241%2C-104.37907613865349&z=16",
+      "share_text": "Going for a hike around the Coal Camp Trail"
+  },
+  "36": {
+      "difficulty" : "Easy",
+      "distance" : "0.1 mile",
+      "community": "3",
+      "name" : "Nature Trail",
+      "description": "Surface: Paved. Parking: Visitor Center. Open: Year-round. Amenities: Park benches, restrooms, trash cans. Note: This wheelchair-accessible trail is the only trail open to pets at Capulin Volcano Nat’l Monument. Wheelchair accessible.",
+      "image_url": "static/images/006-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.778536,-103.979724",
+      "coords": {
+          "latitude": 36.778536,
+          "longitude": -103.979724
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.77884211299258%2C-103.98001708141777&z=18",
+      "share_text": "Going for a walk around the Nature Trail"
+  },
+  "37": {
+      "difficulty" : "Easy to moderate",
+      "distance" : "2 miles",
+      "community": "3",
+      "name" : "Raton Municipal Golf Course",
+      "description": "Surface: Paved (concrete; asphalt) Parking: Golf Course Clubhouse; 510 Country Club Rd. Nearby Cross Streets: Tiger Dr. & Country Club Rd. Open: Year-round Amenities: Benches, trash cans, restrooms at clubhouse Note: Good wildlife viewing. Please pick up dog waste.",
+      "image_url": "static/images/007-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.889995,-104.465616",
+      "coords": {
+          "latitude": 36.889995,
+          "longitude": -104.465616
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.88940913599073%2C-104.46800746075127&z=15",
+      "share_text": "Going for a walk around the Raton Municipal Golf Course"
+  },
+  "38": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "3.25 miles",
+      "community": "3",
+      "name" : "Climax Canyon Trail",
+      "description": "Surface: Dirt Nearby Cross Streets: Apache Ave. & S. 6th St. Parking: Parking lot at west end of Apache Ave. Open: Year-round Amenities: Maps at trailhead kiosk, benches. Note: Piñon pine/juniper forest. Great views of Raton and nearby mesas.",
+      "image_url": "static/images/008-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.900286,-104.449451",
+      "coords": {
+          "latitude": 36.900286,
+          "longitude": -104.449451
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.89994572462612%2C-104.45294417492363&z=15",
+      "share_text": "Going for a hike around Climax Canyon Trail"
+  },
+  "39": {
+      "difficulty" : "Moderate",
+      "distance" : "1.2 miles",
+      "community": "3",
+      "name" : "Lake Alice Trail",
+      "description": "Surface: Dirt. Parking: Visitor Center or Lake Alice Campground Open: Year-round. Amenities: Restrooms, trash cans. Note: Trail parallels Chicorica Creek and Lake Alice.",
+      "image_url": "static/images/009-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.959037,-104.386426",
+      "coords": {
+          "latitude": 36.959037,
+          "longitude": -104.386426
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.94879919608371%2C-104.38179053417656&z=14",
+      "share_text": "Going for a hike on the Lake Alice Trail"
+  },
+  "40": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "2.4 miles",
+      "community": "3",
+      "name" : "Lake to Lake Trail",
+      "description": "Surface: Dirt. Parking: Trailhead E of Lake Alice Campground or Trailhead SE of Lake Maloya Main Boat Ramp. Open: Year-round. Amenities: Restrooms, trash cans. Note: Bridge crosses Chicorica Creek at beaver pond.",
+      "image_url": "static/images/010-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.984409,-104.372449",
+      "coords": {
+          "latitude": 36.984409,
+          "longitude": -104.372449
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.96964878584103%2C-104.38033141247246&z=14",
+      "share_text": "Going for a hike on the Lake to Lake Trail "
+  },
+  "41": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "1.8 miles",
+      "community": "3",
+      "name" : "Deer Run Trail",
+      "description": "Surface: Dirt. Parking: Lake Alice & Soda Pocket Campgrounds. Open: Year-round from lower trailhead. Upper trailhead accessible only during summer. Amenities: Restrooms, trash cans Note: Soda Pocket Rd. & Campground closed Oct.-May.",
+      "image_url": "static/images/011-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.975241,-104.394572",
+      "coords": {
+          "latitude": 36.975241,
+          "longitude": -104.394572
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.96443692360958%2C-104.38852824322197&z=14",
+      "share_text": "Going for a hike on the Deer Run Trail "
+  },
+  "42": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "0.75 mile",
+      "community": "3",
+      "name" : "Vista Grande Trail",
+      "description": "Surface: Dirt. Parking: Summer: upper Soda Pocket Road Rest of year: Lower Deer Run Trailhead. Open: Year-round. Amenities: Restrooms, trash cans. Note: Soda Pocket Rd. & Campground closed Oct.-May. Access trail Oct.-May by foot from Deer Run Tr.",
+      "image_url": "static/images/012-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.969529,-104.394190",
+      "coords": {
+          "latitude": 36.969529,
+          "longitude": -104.394190
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.968878367527196%2C-104.39464367977592&z=17",
+      "share_text": "Going for a hike on the Vista Grande Trail "
   }
 }
