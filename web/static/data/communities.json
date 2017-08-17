@@ -1,13 +1,13 @@
 {
     "1": {
         "name": "Step Into Cuba",
-        "location": "Cuba",
+        "location": "Cuba, Santa Fe National Forest",
         "coords": {
             "latitude": 36.01475555,
             "longitude": -106.9639361
         },
         "description": "A guide to places to walk and hike near Cuba, New Mexico",
-        "banner_image_url": "static/images/GuideLogo.png",
+        "banner_image_url": "static/images/Cuba-Cover.png",
         "image_url": "",
         "logo_url": "static/images/SICLogo.jpeg",
         "map_images": [
@@ -51,7 +51,7 @@
     		"longitude": -104.435618
     	},
     	"description": "A guide to places to walk and hike near Raton, New Mexico",
-    	"banner_image_url": "static/images/RRR.png",
+    	"banner_image_url": "static/images/RRRCover.png",
     	"logo_url": "static/images/RRRLogo.png",
       "trails": [31,32,33,34,35,36,37,38,39,40,41,42]
     },

@@ -889,7 +889,7 @@
       "community": "4",
       "name" : "Alameda Park Zoo",
       "description": "Surface: Concreate sidewalks. Open 9:00 a.m. - 5:00 p.m. daily (except Christmas and New Year’s Day) Yes. 2 years and under free; 3-11 years $1.50; 12-59 years $2.50; 60+ $1.50; membership passes available. Fully accessible for people using wheelchairs, walkers and strollers; Butterfly Gazebo; animal sanctuaries; playground; green spaces; picnic tables; benches",
-      "image_url": "static/images/001-TI.jpg",
+      "image_url": "static/images/001-TI.png",
       "dogs_allowed": false,
       "map_image_url": "static/images/maps/",
       "static_map_url": "http://maps.apple.com/maps?daddr=32.900519,-105.960900",
