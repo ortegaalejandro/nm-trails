@@ -882,5 +882,209 @@
       },
       "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.78291496091835%2C-103.97715248218987&z=15",
       "share_text": "Going for a hike on the Boca Trail "
+  },
+  "53": {
+      "difficulty" : "Grade 1 Concrete sidewalks",
+      "distance" : ".25 mile",
+      "community": "4",
+      "name" : "Alameda Park Zoo",
+      "description": "Surface: Concreate sidewalks. Open 9:00 a.m. - 5:00 p.m. daily (except Christmas and New Year’s Day) Yes. 2 years and under free; 3-11 years $1.50; 12-59 years $2.50; 60+ $1.50; membership passes available. Fully accessible for people using wheelchairs, walkers and strollers; Butterfly Gazebo; animal sanctuaries; playground; green spaces; picnic tables; benches",
+      "image_url": "static/images/001-TI.jpg",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.900519,-105.960900",
+      "coords": {
+          "latitude": 32.900519,
+          "longitude": -105.960900
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.90218929941254%2C-105.96097423961339&z=17",
+      "share_text": "Going for a walk around the Alameda Park Zoo"
+  },
+  "54": {
+      "difficulty" : "Grade 2 Asphalt",
+      "distance" : "1 mile one way",
+      "community": "4",
+      "name" : "Indian Wells Ave. Walking Path",
+      "description": "",
+      "image_url": "static/images/003-TI.png",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.916332,-105.948771",
+      "coords": {
+          "latitude": 32.916332,
+          "longitude": -105.948771
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.91622669945973%2C-105.95534160068212&z=16",
+      "share_text": "Going for a walk around Indian Wells Ave. Walking Path"
+  },
+  "55": {
+      "difficulty" : "Grade 1 Concrete sidewalks",
+      "distance" : "1 mile loop",
+      "community": "4",
+      "name" : "NM School for the Blind and Visually Impaired Campus",
+      "description": "Surface: Rubberized track. Use during non-school hours: early morning, after school, weekends.",
+      "image_url": "static/images/004-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.911213,-105.948487",
+      "coords": {
+          "latitude": 32.911213,
+          "longitude": -105.948487
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.91377046721073%2C-105.96027686526952&z=17",
+      "share_text": "Going for a walk around the NM School for the Blind and Visually Impaired Campus"
+  },
+  "56": {
+      "difficulty" : "Grade 2 Concrete sidewalks",
+      "distance" : "2 miles one way",
+      "community": "4",
+      "name" : "North Scenic Drive Walking Area",
+      "description": "Surface: Concrete sidewalks. Stroller walking; pet friendly on leash, grass an desert landscape along side of sidewalk , mountain scenery; panoramic view of basin.",
+      "image_url": "static/images/005-TI.png",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.919739,-105.927051",
+      "coords": {
+          "latitude": 32.919739,
+          "longitude": -105.927051
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.93301430107063%2C-105.94694360600579&z=15",
+      "share_text": "Going for a walk around the North Scenic Drive Walking Area"
+  },
+  "57": {
+      "difficulty" : "Grade 2 Concrete sidewalks",
+      "distance" : "2 mile loop",
+      "community": "4",
+      "name" : "South Scenic Drive Walking Area",
+      "description": "Surface: Concrete sidewalks. Stroller walking, pet friendly on leash, cover gazebo along route, wide panoramic view of the Tularosa Basin, mountain scenery including the Sleeping Lady of the Mountain.",
+      "image_url": "static/images/006-TI.png",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.889907,-105.930828",
+      "coords": {
+          "latitude": 32.889907,
+          "longitude": -105.930828
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.88308836622207%2C-105.93004032479394&z=16",
+      "share_text": "Going for a walk around the South Scenic Drive Walking Area "
+  },
+  "58": {
+      "difficulty" : "Grade 1 Tile surface",
+      "distance" : ".25 mile loop",
+      "community": "4",
+      "name" : "White Sands Mall Walking Area",
+      "description": "Surface: Tile Surface. Fully accessible for people using wheelchairs, walkers and strollers; indoor; food court; shopping; Veterans Clinic. Open for walkers 8 a.m.-9 p.m., Mon.- Sat.; noon-6 p.m. Sun.; enter through main or north doors.",
+      "image_url": "static/images/007-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.929872,-105.963277",
+      "coords": {
+          "latitude": 32.929872,
+          "longitude": -105.963277
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.929864193144915%2C-105.9638361313796&z=16",
+      "share_text": "Going for a walk around the White Sands Mall Walking Area"
+  },
+  "59": {
+      "difficulty" : "Grade 1 Rubberized track",
+      "distance" : ".25 mile loop",
+      "community": "4",
+      "name" : "Tularosa High School Track",
+      "description": "Surface: Rubberized track. Hours: Early morning, after school, weekends. Access field through two gates - 40-yard gravel path leads to asphalt sidewalk, which leads to track.",
+      "image_url": "static/images/008-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=33.073013,-106.024621",
+      "coords": {
+          "latitude": 33.073013,
+          "longitude": -106.024621
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=33.07375925544506%2C-106.02659926402896&z=18",
+      "share_text": "Going for a walk around Tularosa High School Track"
+  },
+  "60": {
+      "difficulty" : "Grade 1 Simulated wood decking",
+      "distance" : ".33 mile roundtrip",
+      "community": "4",
+      "name" : "Interdune Boardwalk",
+      "description": "",
+      "image_url": "static/images/009-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.973581,-106.239499",
+      "coords": {
+          "latitude": 32.973581,
+          "longitude": -106.239499
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.795027736759906%2C-106.23900603496406&z=18",
+      "share_text": "Going for a walk around the Interdune Boardwalk"
+  },
+  "61": {
+      "difficulty" : "Grade 3 Packed sand/dirt",
+      "distance" : ".25 mile roundtrip",
+      "community": "4",
+      "name" : "Playa Trail",
+      "description": "Surface: Packed sand/dirt. Seasonal park hours. For park hours call 479-6124. This is a level trail in White Sands National Monument that leads to a small playa. Like Lake Lucero, this smaller playa is a shallow depression or low-lying area that fills temporarily with rainwater from storms. Most of the year, it is a dry lakebed.",
+      "image_url": "static/images/010-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.795571,-106.211600",
+      "coords": {
+          "latitude": 32.795571,
+          "longitude": -106.211600
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.7968517416258%2C-106.21136651354595&z=18",
+      "share_text": "Going for a hike on the Playa Trail"
+  },
+  "62": {
+      "difficulty" : "Grade 3 varied surface",
+      "distance" : "1.3 miles",
+      "community": "4",
+      "name" : "Grandview Trail",
+      "description": "Surface: Varied. Trail Surface: Varies from fairly flat gravel railroad grade to rocky, slightly undulating slopes that contour with the surrounding environment. Public Facilities and Amenities: No public facilities. A covered ramada with a bench .53 miles into the hike and offers  spectacular panoramic views of White Sands, the Tularosa Basin and the San Andres Mountains. Parking: Limited, off road parking is available at the northern trailhead.",
+      "image_url": "static/images/011-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.958348,-105.852340",
+      "coords": {
+          "latitude": 32.958348,
+          "longitude": -105.852340
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.954818423292544%2C-105.8557230032605&z=16",
+      "share_text": "Going for a hike on the Grandview Trail"
+  },
+  "63": {
+      "difficulty" : "Grade 3 Gravel trail surface",
+      "distance" : ".4 mile loop",
+      "community": "4",
+      "name" : "La Pasada Encantada Trail",
+      "description": "Surface: Gravel. The U.S. Forest Service, with students from the New Mexico School for the Blind and Visually Impaired, designed this trail to create an experience and interpretive walk for those that are visually handicapped. Braille interpretive signs direct users to feel and touch nature; to feel the bark of a young tree compared to an old tree, to feel and count the rings of a tree to determine age, to feel fossils in rocks, to walk the length of a downed tree to understand the height. The entire trail is lined with 6” x 6” posts providing excellent cues on the direction of the trail. This is truly a unique trail and a great place to learn, get fit and escape the heat.",
+      "image_url": "static/images/012-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.941649,-105.737449",
+      "coords": {
+          "latitude": 32.941649,
+          "longitude": -105.737449
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.94115965872992%2C-105.73742685496933&z=17",
+      "share_text": "Going for a hike on La Pasada Encantada Trail"
+  },
+  "64": {
+      "difficulty" : "Grade 3 Blacktop",
+      "distance" : ".2 mile",
+      "community": "4",
+      "name" : "Overlook Trail",
+      "description": "Surface: Blacktop. Wheelchair accessible loop hike in the Trestle Recreation Area on the outskirts of Cloudcroft; picnic area with grills, trash cans, drinking water, and an interpretive kiosk with brochures are available; a replica of the exterior of Cloudcroft’s final railroad depot houses restrooms. Public Facilities and Amenities: On the hike is the Overlook Platform, with bench and interpretive panel, offering a great place to sit and enjoy spectacular views of the Tularosa Basin, including White Sands. Parking: Available at the Trestle Recreation Center ",
+      "image_url": "static/images/013-TI.png",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=32.957377,-105.749677",
+      "coords": {
+          "latitude": 32.957377,
+          "longitude": -105.749677
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.95736527808465%2C-105.75183835796184&z=17",
+      "share_text": "Going for a walk around the Overlook Trail"
   }
 }
