@@ -6,7 +6,7 @@
             "latitude": 36.01475555,
             "longitude": -106.9639361
         },
-        "description": "A guide to places to walk and hike near Cuba, New Mexico",
+        "description": "",
         "banner_image_url": "static/images/Cuba-Cover.png",
         "image_url": "",
         "logo_url": "static/images/SICLogo.jpeg",
@@ -18,7 +18,11 @@
         	{
         		"name": "Continental Divide Trail",
         		"url": "static/images/maps/CubaCDT.png"
-        	}
+        	},
+          {
+            "name": "Interactive GPS Map",
+            "url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.02229361774074%2C-106.94810307147219&z=12"
+          }
         ],
         "resources_url": "https://www.stepintocuba.org",
         "trails": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -38,9 +42,13 @@
     		{
     			"name": "Silver City Trails",
     			"url": "static/images/maps/SilverCityTrails.png"
-    		}
+    		},
+        {
+          "name": "Interactive GPS Trails Map",
+          "url": "https://www.google.com/maps/d/edit?mid=1-DhfWHJWf3oCMU6Ysue6_KLNQF8&ll=32.76563498505642%2C-108.27821500000005&z=10"
+        }
     	],
-    	"resources_url": "",
+    	"resources_url": "https://viva-connects.org/wp-content/uploads/2017/06/GrantCounty_WalkingGuide.pdf",
     	"trails": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
     },
     "3": {
@@ -50,7 +58,7 @@
     		"latitude": 36.899160,
     		"longitude": -104.435618
     	},
-    	"description": "A guide to places to walk and hike near Raton, New Mexico",
+    	"description": "",
     	"banner_image_url": "static/images/RRRCover.png",
     	"logo_url": "static/images/RRRLogo.png",
       "map_images": [
@@ -69,16 +77,21 @@
         {
           "name": "Capulin National Monument",
           "url": "static/images/maps/CapulinMap.png"
+        },
+        {
+          "name": "Interactive GPS Trails Map",
+          "url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.88439888982339%2C-104.3076009294922&z=11"
         }
       ],
+      "resources_url": "https://viva-connects.org/wp-content/uploads/2017/03/Walking-Trails-FINAL_Booklet_Reformatted_030117rv_ALL-PAGES.pdf",
       "trails": [31,32,33,34,35,36,37,38,39,40,41,42]
     },
     "4": {
     	"name": "Otero County Trails",
     	"location": "Alamogordo, Tularosa, Whitesands",
     	"coords": {
-    		"latitude": 32.77096,
-    		"longitude": -108.275229
+    		"latitude": 32.900519,
+    		"longitude": -105.960900
     	},
     	"description": "",
     	"banner_image_url": "static/images/TTSplash.png",
@@ -88,7 +101,11 @@
     		{
     			"name": "Otero County Trails",
     			"url": "static/images/maps/Tulie-Overview.png"
-    		}
+    		},
+        {
+          "name": "Interactive GPS Trails Map",
+          "url": "https://www.google.com/maps/d/edit?mid=1b131M-Ee4PM42MFbBhE-p_3xsCk&ll=32.891692031922915%2C-106.08894375137157&z=10"
+        }
     	],
     	"resources_url": "https://viva-connects.org/wp-content/uploads/2017/06/OteroCounty_WalkingGuide.pdf",
     	"trails": []
