@@ -712,5 +712,175 @@
       },
       "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.968878367527196%2C-104.39464367977592&z=17",
       "share_text": "Going for a hike on the Vista Grande Trail "
+  },
+  "43": {
+      "difficulty" : "Moderate",
+      "distance" : "2.5 miles",
+      "community": "3",
+      "name" : "Lake Maloya Trail",
+      "description": "Surface: Dirt. Parking: Trailhead at west end of dam Open: Year-round. Amenities: Restroom, benches. Note: Trail rejoins road at Lake Dorothey parking lot in CO. To return, you can follow road along E side of lake. Trail is also part of 6-mile loop around Little Horse Mesa.",
+      "image_url": "static/images/013-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.984082,-104.376849",
+      "coords": {
+          "latitude": 36.984082,
+          "longitude": -104.376849
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.990938278938444%2C-104.37195219150993&z=14",
+      "share_text": "Going for a hike on the Lake Maloya Trail"
+  },
+  "44": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "2.6 miles",
+      "community": "3",
+      "name" : "Wapiti Trail",
+      "description": "Surface: Dirt. Parking: Lake Maloya main boat ramp; to access trail, cross road to gate at trailhead. Open: Year-round. Amenities: Restrooms, trash cans at boat ramp.",
+      "image_url": "static/images/014-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.984409,-104.372449",
+      "coords": {
+          "latitude": 36.984409,
+          "longitude": -104.372449
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.9818549207822%2C-104.36560072056267&z=15",
+      "share_text": "Going for a hike on the Wapiti Trail"
+  },
+  "45": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "4 miles",
+      "community": "3",
+      "name" : "Opportunity Trail",
+      "description": "Surface: Dirt. Parking: Summer: Soda Pocket Trailhead Otherwise: Lake Maloya Trailhead or gate at bottom of Soda Pocket Rd. Open Year-round. Amenities: Restroom, trash can at trailhead Note: Soda Pocket Rd. Campground closed Oct-May. Trail is part of a 6 mile loop around Little Horse Mesa.",
+      "image_url": "static/images/015-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.978439,-104.396742",
+      "coords": {
+          "latitude": 36.978439,
+          "longitude": -104.396742
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.986993023115176%2C-104.39306654087517&z=13",
+      "share_text": "Going for a hike on the Opportunity Trail"
+  },
+  "46": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "1.8 miles",
+      "community": "3",
+      "name" : "Ponderosa Ridge Trail",
+      "description": "Surface: Dirt. Parking: Year-round at Lake Maloya Trailhead. Summer only at Soda Pocket Trailhead Open: Year-round. Amenities: Restrooms, trash cans at trailheads. Note: Soda Pocket Rd. & Campground closed Oct.-May. Trail is part of a 6 mile loop around Little Horse Mesa. Note: Soda Pocket Rd. & Campground closed Oct.-May. Trail part of 6-mile loop around Little Horse Mesa.",
+      "image_url": "static/images/016-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.978439,-104.396742",
+      "coords": {
+          "latitude": 36.978439,
+          "longitude": -104.396742
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.986993023115176%2C-104.39306654087517&z=13",
+      "share_text": "Going for a hike on Ponderosa Ridge Trail"
+  },
+  "47": {
+      "difficulty" : "Moderate",
+      "distance" : "1 mile",
+      "community": "3",
+      "name" : "Lava Flow Trail",
+      "description": "Surface: Unpaved. Parking: Visitor Center. Open: Year-round. Amenities: Park benches, restrooms, trash cans. Note: Mostly easy trail wanders through lava flow. Some steep portions.",
+      "image_url": "static/images/017-RRR.jpg",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.778536,-103.979724",
+      "coords": {
+          "latitude": 36.778536,
+          "longitude": -103.979724
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.777415551369245%2C-103.97728122822258&z=16",
+      "share_text": "Going for a walk around the Lava Flow Trail"
+  },
+  "48": {
+      "difficulty" : "Moderate",
+      "distance" : "0.2 mile",
+      "community": "3",
+      "name" : "Crater Vent Trail",
+      "description": "Surface: Paved. Parking: Volcano Road overlook. Open: Year-round, except for brief winter snow closures Amenities: Park benches, restrooms, trash cans. Note: Trail descends to bottom of crater. Elevation change is 100 feet.",
+      "image_url": "static/images/018-RRR.jpg",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.782714,-103.972263",
+      "coords": {
+          "latitude": 36.782714,
+          "longitude": -103.972263
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.782433960830446%2C-103.96998561970207&z=16",
+      "share_text": "Going for a walk around the Crater Vent Trail"
+  },
+  "49": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "1 mile",
+      "community": "3",
+      "name" : "Crater Rim Trail",
+      "description": "Surface: Paved. Parking: Volcano Road overlook. Open: Year-round, except for brief winter snow closures Amenities: Park benches, restrooms, trash cans. Notes: Spectacular 360-degree views. Trail follows rim; highest point is 8,182 feet of elevation.",
+      "image_url": "static/images/019-RRR.jpg",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.782714,-103.972263",
+      "coords": {
+          "latitude": 36.782714,
+          "longitude": -103.972263
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.782433960830446%2C-103.96998561970207&z=16",
+      "share_text": "Going for a walk around the Crater Rim Trail"
+  },
+  "50": {
+      "difficulty" : "Moderate to strenuous",
+      "distance" : "3 miles",
+      "community": "3",
+      "name" : "Scenic Drive",
+      "description": "Surface: Unpaved; severely eroded in places Nearby Cross Streets: Tiger Dr. & Scenic Rd. Moulton Ave. & Old Pass Rd. Parking: South end: trailhead; north end: Old Pass Road. Open: Year-round Amenities: None. Note: This trail open to off-road vehicles. Great views.",
+      "image_url": "static/images/020-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.894613,-104.451874",
+      "coords": {
+          "latitude": 36.894613,
+          "longitude": -104.451874
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.89852148252197%2C-104.45441402546379&z=15",
+      "share_text": "Going for a walk around the Scenic Drive"
+  },
+  "51": {
+      "difficulty" : "Strenuous",
+      "distance" : "0.75 mile",
+      "community": "3",
+      "name" : "Little Horse Mesa Trail",
+      "description": "Surface: Dirt. Parking: Summer: Soda Pocket Trailhead Otherwise: Lake Maloya Trailhead or gate at bottom of Soda Pocket Rd.  Open: Year-round. Amenities: Restrooms, trash cans at trailheads. Note: Soda Pocket Rd. & Campground closed Oct.-May.",
+      "image_url": "static/images/021-RRR.jpg",
+      "dogs_allowed": true,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.978439,-104.396742",
+      "coords": {
+          "latitude": 36.978439,
+          "longitude": -104.396742
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.97991796905309%2C-104.39978279224846&z=15",
+      "share_text": "Going for a hike on Little Horse Mesa Trail"
+  },
+  "52": {
+      "difficulty" : "Strenuous",
+      "distance" : "2 mile loop",
+      "community": "3",
+      "name" : "Boca Trail",
+      "description": "Surface: Dirt. Parking: Picnic area; occasional winter snow closures Open: Year-round from Visitor Center. Amenities: Park benches, restrooms, trash cans. Note: Trail meanders through vent area where volcano’s lava  flows originated. Look for “lava lakes,” “lava tubes” & “spatter hill.",
+      "image_url": "static/images/022-RRR.jpg",
+      "dogs_allowed": false,
+      "map_image_url": "static/images/maps/",
+      "static_map_url": "http://maps.apple.com/maps?daddr=36.779824,-103.976957",
+      "coords": {
+          "latitude": 36.779824,
+          "longitude": -103.976957
+      },
+      "live_map_url": "https://www.google.com/maps/d/edit?mid=1nQ-Wrk9M9ka8_M6mTjn_eIwwcY8&ll=36.78291496091835%2C-103.97715248218987&z=15",
+      "share_text": "Going for a hike on the Boca Trail "
   }
 }
