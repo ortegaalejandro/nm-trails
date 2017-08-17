@@ -53,6 +53,24 @@
     	"description": "A guide to places to walk and hike near Raton, New Mexico",
     	"banner_image_url": "static/images/RRRCover.png",
     	"logo_url": "static/images/RRRLogo.png",
+      "map_images": [
+        {
+          "name": "Ramblin' Round Raton Area Map",
+          "url": "static/images/maps/RatonMap.png"
+        },
+        {
+          "name": "Raton City Map",
+          "url": "static/images/maps/RRR-Sat.png"
+        },
+        {
+          "name": "Sugarite Canyon State Park",
+          "url": "static/images/maps/RRR-Sugarite.png"
+        },
+        {
+          "name": "Capulin National Monument",
+          "url": "static/images/maps/CapulinMap.png"
+        }
+      ],
       "trails": [31,32,33,34,35,36,37,38,39,40,41,42]
     },
     "4": {
