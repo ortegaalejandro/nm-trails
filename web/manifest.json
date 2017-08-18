@@ -38,5 +38,10 @@
   ],
   "start_url" : "/index.html",
   "display" :"standalone",
-  "orientation" : "portrait"
+  "orientation" : "portrait",
+  "serviceworker":{
+    "src": "service-worker.js",
+    "scope": "/trails/",
+    "use_cache": true
+  }
 }
