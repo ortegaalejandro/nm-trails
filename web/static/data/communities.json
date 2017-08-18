@@ -37,7 +37,7 @@
     	"description": "",
     	"banner_image_url": "static/images/SCT-GuideCover.png",
     	"image_url": "",
-      "logo_url":"static/images/GrantCoLogo.png",
+      "logo_url":"static/images/SWIcon.png",
     	"map_images": [
     		{
     			"name": "Silver City Trails",
@@ -96,7 +96,7 @@
     	"description": "",
     	"banner_image_url": "static/images/TTSplash.png",
     	"image_url": "",
-      "logo_url":"static/images/OteroCoLogo.png",
+      "logo_url":"static/images/SWIcon.png",
     	"map_images": [
     		{
     			"name": "Otero County Trails",
