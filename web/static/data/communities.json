@@ -22,7 +22,11 @@
           {
             "name": "Interactive GPS Trails Map",
             "url": "https://www.google.com/maps/d/edit?mid=1wAXEMoFvybWUcvAOizruaa4hXtU&ll=36.02229361774074%2C-106.94810307147219&z=12"
-          }
+          },
+          {
+            "name": "Step Into Cuba Passport",
+            "url": "https://www.stepintocuba.org/passport/"
+            }
         ],
         "resources_url": "https://www.stepintocuba.org",
         "trails": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
