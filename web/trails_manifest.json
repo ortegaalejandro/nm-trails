@@ -43,5 +43,7 @@
     "src": "service-worker.js",
     "scope": "/trails/",
     "use_cache": true
-  }
+  },
+  "background_color" : "#FFFFFF",
+  "theme_color": "#FFFFFF"
 }
