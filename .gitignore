@@ -2,5 +2,4 @@
 node_modules
 *.log
 /web/dist
-web/service-worker.js
 viva_connects_rsa
