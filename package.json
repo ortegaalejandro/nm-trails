@@ -15,8 +15,7 @@
     "push": "rsync -rav -e 'ssh -p 18765 -i viva_connects_rsa' ./web/* vivaconn@viva-connects.org:public_html/nm-trails",
     "ssh": "ssh -p 18765 -i viva_connects_rsa vivaconn@viva-connects.org",
     "deploy": "npm run build && npm run push && npm run clean",
-    "server": "cd web && python -mSimpleHTTPServer",
-    "clean": "rm -f web/service-worker.js"
+    "server": "cd web && python -mSimpleHTTPServer"
   },
   "repository": {
     "type": "git",
