@@ -36,7 +36,7 @@
       "purpose" : "any"
     }
   ],
-  "start_url" : "/index.html",
+  "start_url" : "https://viva-connects.org/nm-trails/index.html",
   "display" :"standalone",
   "orientation" : "portrait",
   "serviceworker":{
