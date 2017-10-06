@@ -1,5 +1,25 @@
 {
     "1": {
+        "name": "VIVA Connects Program Informaiton",
+        "location": "UNM Prevention Research Center",
+        "coords": {
+            "latitude": 35.089716,
+            "longitude": -106.615144
+        },
+        "description": "The mission of VIVA Connects is to partner with community groups to disseminate and implement effective strategies for increasing access to, and social support for, physical activity and healthy lifestyles in rural New Mexico communities.",
+        "banner_image_url": "static/images/launch-images/iPhone47.png",
+        "image_url": "",
+        "logo_url": "static/images/icons/Icon-192.png",
+        "map_images": [
+          {
+            "name": "Install Instructions",
+            "url": "https://www.stepintocuba.org/app"
+          }
+        ],
+        "resources_url": "https://www.viva-connects.org",
+        "trails": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64]
+    },
+    "2": {
         "name": "Step Into Cuba",
         "location": "Cuba, Santa Fe National Forest",
         "coords": {
@@ -31,7 +51,7 @@
         "resources_url": "https://www.stepintocuba.org",
         "trails": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     },
-    "2": {
+    "3": {
     	"name": "Grant County Trails",
     	"location": "Silver City, Bayard, & Santa Clara",
     	"coords": {
@@ -55,7 +75,7 @@
     	"resources_url": "https://viva-connects.org/wp-content/uploads/2017/06/GrantCounty_WalkingGuide.pdf",
     	"trails": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
     },
-    "3": {
+    "4": {
     	"name": "Raton",
     	"location": "Raton, Sugarite, Capulin",
       "coords": {
@@ -90,7 +110,7 @@
       "resources_url": "https://viva-connects.org/wp-content/uploads/2017/03/Walking-Trails-FINAL_Booklet_Reformatted_030117rv_ALL-PAGES.pdf",
       "trails": [31,32,33,34,35,36,37,38,39,40,41,42]
     },
-    "4": {
+    "5": {
     	"name": "Otero County Trails",
     	"location": "Alamogordo, Tularosa, Whitesands",
     	"coords": {
