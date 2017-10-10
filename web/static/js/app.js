@@ -29,6 +29,7 @@ var sortByDistance = function(keys, entities, userCoords) {
 var TrailData = {
   _trails: null,
   _communities: null,
+  _comtrails: null,
 
   getTrails: function() {
     if (this._trails == null) {
@@ -63,6 +64,24 @@ var TrailData = {
       return communities[id];
     });
   },
+
+  getComTrails: function() {
+    if (this._comtrails == null) {
+      return $.getJSON('static/data/comtrail.json').then(function(comtrails) {
+        this._comtrails = comtrails;
+        return comtrails;
+      }.bind(this))
+    } else {
+      return $.Deferred().resolve(this._comtrails).promise();
+    }
+  },
+
+  getComTrail: function(id) {
+    return this.getComTrails().then(function(comtrails) {
+      return comtrails[id];
+    });
+  },
+
 
   /**
    * Wrapper around watching the geolocation with additional caching in localStorage.

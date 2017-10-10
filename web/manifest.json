@@ -1,0 +1,28 @@
+{
+  "short_name": "Trails Across New Mexico",
+  "name": "VIVA Connects: Trails Across New Mexico",
+  "icons":[
+    {
+      "src": "static/images/icons/icon-57.jpg",
+      "type": "image/jpg",
+      "sizes": "57x57"
+    },
+    {
+      "src": "static/images/icons/icon-48.jpg",
+      "type": "image/jpg",
+      "sizes": "48x48"
+    },
+    {
+      "src": "static/images/icons/icon-114.jpg",
+      "type": "image/jpg",
+      "sizes": "114x114"
+    },
+    {
+      "src": "static/images/icons/icon-144.jpg",
+      "type": "image/jpg",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": "index.html?launcher=true",
+  "background_color": "#FFFFFF",
+}
